@@ -1,12 +1,12 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-## Gitpod Template Instructions
+## Introduction
 
-Welcome,
+Breast cancer (BC) is one of the most common cancers among women worldwide, representing the majority of new cancer cases and cancer-related deaths according to global statistics, making it a significant public health problem in today’s society.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions. Click the `Use this template` button above to get started.
+The early diagnosis of BC can improve the prognosis and chance of survival significantly, as it can promote timely clinical treatment to patients. Further accurate classification of benign tumors can prevent patients undergoing unnecessary treatments. Thus, the correct diagnosis of BC and classification of patients into malignant or benign groups is the subject of much research. Because of its unique advantages in critical features detection from complex BC datasets, machine learning (ML) is widely recognized as the methodology of choice in BC pattern classification and forecast modelling.
 
-You can safely delete the Gitpod Template Instructions section of this README.md file,  and modify the remaining paragraphs for your own project. Please do read the Gitpod Template Instructions at least once, though! It contains some important information about Gitpod and the extensions we use. 
+Classification and data mining methods are an effective way to classify data. Especially in medical field, where those methods are widely used in diagnosis and analysis to make decisions.
 
 ## Gitpod Reminders
 
@@ -26,7 +26,13 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 
 
 ## Business Requirements
-* Describe your business requirements
+
+Business Requirement 1
+o	The client is interested in ways to create a model that can predict if a tumour is benign or malignant based on the given features.
+
+Business Requirement 2
+o	The client is interested in predicting whether a given cell has cancer or not with a high degree of accuracy.
+
 
 
 ## Hypothesis and how to validate?
@@ -38,7 +44,11 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 
 
 ## ML Business Case
-* In the previous bullet, you potentially visualized an ML task to answer a business requirement. You should frame the business case using the method we covered in the course 
+
+We want an ML model that will predict if a cell is either Benign or Malignant an ideal outcome of this is to provide the medical team with faster and more reliable diagnostic information so the patient can get the right treatment tha they need faster, improving the chances of them recovering.
+
+The model success metrics are 95% or above on the test set. 
+
 
 
 ## Dashboard Design
