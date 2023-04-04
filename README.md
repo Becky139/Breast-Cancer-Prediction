@@ -22,7 +22,10 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 
 
 ## Dataset Content
-* Describe your dataset
+
+* The dataset is on kaggel it is available for use the License is CC0: Public Domain so we can use it, it has 32 columns and over 500 rows of data.
+
+data image to go here
 
 
 ## Business Requirements
