@@ -57,9 +57,9 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 
 ## Dataset Content
 
-* The dataset is on kaggel it is available for use the License is CC0: Public Domain so we can use it, it has 32 columns and over 500 rows of data.
+* The dataset is on kaggel it is publicly available so it does not require a license to use, the data set contain 569 rows and 32 columns. Each row represents and person and the columns have differant signs or textures of tumours.
 
-data image to go here
+![Data Sample](/assests/images/data-sample.PNG)
 
 
 ## Business Requirements
