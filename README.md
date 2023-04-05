@@ -8,6 +8,40 @@ The early diagnosis of BC can improve the prognosis and chance of survival signi
 
 Classification and data mining methods are an effective way to classify data. Especially in medical field, where those methods are widely used in diagnosis and analysis to make decisions.
 
+Symptoms for specific types of cancer
+According to the American Cancer Society (ACS)Trusted Source, the most common sign of breast cancer is a new lump or mass in the breast. People should become familiar with the typical look and feel of their breasts to detect any changes early on.
+
+Breast cancer can develop in males and females, but due to differencesTrusted Source in breast tissue, the disease is much less common in males.
+
+Below, we outline some early indications of breast cancer. We also describe the various types and treatment options. Finally, we look into some benign conditions people may mistake for breast cancer.
+
+Benign breast conditions
+Several benign breast conditions can cause symptoms that resemble those of cancer. Some of these issues require treatment, while others go away on their own.
+
+Though these conditions are benign, they can cause:
+
+discomfort or pain swelling lumps Some common benign breast conditions include:
+
+Cysts: These are fluid-filled sacs that can form in many parts of the body, including the breasts.
+
+Mastitis: This is inflammation (swelling) in the breast that is usually from an infection.
+
+Hyperplasia: This is an overgrowth of cells, particularly in the milk ducts or lobules inside the breast.
+
+Sclerosing adenosis: This is a condition in which lobules enlarge.
+
+Intraductal papillomas: These are benign wart-like tumors that grow within the milk ducts of the breast.
+
+Fibroadenoma: These are common breast tumors that develop when an overgrowth of fibrous or glandular tissue forms around a lobule.
+
+Radial scar: Also called complex sclerosing lesions, these are a core of connective tissue that can resemble breast cancer on a mammogram.
+
+Fat necrosis: This develops following an injury to fatty breast tissue, as can happen following surgery, radiation, or injury to the breast.
+
+Phyllodes tumors: These are fast-growing but typically painless tumors that start in the connective tissue of the breast. Some can be cancerous.
+
+![Breast Cancer](/assests/images/breast-cancer.webp)
+
 ## Gitpod Reminders
 
 To log into the Heroku toolbelt CLI:
@@ -34,12 +68,15 @@ Business Requirement 1
 o	The client is interested in ways to create a model that can predict if a tumour is benign or malignant based on the given features.
 
 Business Requirement 2
-o	The client is interested in predicting whether a given cell has cancer or not with a high degree of accuracy.
+o	The client is interested in predicting whether a given tumour has cancer or is benign with a high degree of accuracy.
 
 
 
 ## Hypothesis and how to validate?
-* List here your project hypothesis(es) and how you envision validating it (them) 
+
+* We beliveve that by looking at differant features we can differentiate between benign or malignant tumours.
+
+o This analysis aims to observe which features are most helpful in predicting malignant or benign cancer and to see general trends that may aid us in model selection and hyper parameter selection. The goal is to classify whether the breast cancer is benign or malignant. To achieve this i have used machine learning classification methods to fit a function that can predict the discrete class of new input.
 
 
 ## The rationale to map the business requirements to the Data Visualizations and ML tasks
@@ -52,12 +89,17 @@ We want an ML model that will predict if a cell is either Benign or Malignant an
 
 The model success metrics are 95% or above on the test set. 
 
-
+![Business Case](/assests/documents/business-case.docx)
 
 ## Dashboard Design
-* List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other item that your dashboard library supports.
-* Later, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but subsequently you used another plot type).
 
+Page 1: Quick project summary
+Quick project summary
+Project Terms & Jargon
+Describe Project Dataset
+State Business Requirements
+
+Page 2:
 
 
 ## Unfixed Bugs
