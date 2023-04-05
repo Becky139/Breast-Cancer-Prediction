@@ -1,4 +1,4 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![project](project image)
 
 ## Introduction
 
@@ -80,14 +80,33 @@ o This analysis aims to observe which features are most helpful in predicting ma
 
 
 ## The rationale to map the business requirements to the Data Visualizations and ML tasks
-* List your business requirements and a rationale to map them to the Data Visualizations and ML tasks
 
+Business Requirement 1: Data Visualizations
+1. Data Exploration
+2. Categorical Data
+3. Feature Scaling
+
+Business Requirement 2: Machine Learing Classification Analysis
+1. Model Selection
+2. Finalize Model
+3. Test Model
+4. Conclusion
 
 ## ML Business Case
 
-We want an ML model that will predict if a cell is either Benign or Malignant an ideal outcome of this is to provide the medical team with faster and more reliable diagnostic information so the patient can get the right treatment tha they need faster, improving the chances of them recovering.
+This analysis aims to observe which features are most helpful in predicting malignant or benign cancer and to see general trends that may aid us in model selection and hyper parameter selection. The goal is to classify whether the breast cancer is benign or malignant. To achieve this i have used machine learning classification methods to fit a function that can predict the discrete class of new input. 
+In our dataset we have the outcome variable or Dependent variable i.e Y having only two set of values, either M (Malign) or B(Benign). So we will use Classification algorithm of supervised learning.
 
-The model success metrics are 95% or above on the test set. 
+We have different types of classification algorithms we will be using :-
+1. Logistic Regression
+2. Nearest Neighbor
+3. Support Vector Machines
+4. Decision Tree Algorithm
+5. Random Forest Classification
+We will use sklearn library to import all the methods of classification algorithms.
+We will use LogisticRegression method of model selection to use Logistic Regression Algorithm.
+
+The model success metrics are 95% or above on the test set.
 
 ![Business Case](/assests/documents/business-case.docx)
 
@@ -99,7 +118,13 @@ Project Terms & Jargon
 Describe Project Dataset
 State Business Requirements
 
-Page 2:
+Page 2: Data Visualization
+
+Page 4: Hypothesis
+
+Page 3: Model Selection
+
+Page 4: Finalize Model/Conculsion
 
 
 ## Unfixed Bugs
