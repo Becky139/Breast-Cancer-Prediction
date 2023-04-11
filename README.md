@@ -115,18 +115,25 @@ The model success metrics are 95% or above on the test set.
 ## Dashboard Design
 
 Page 1: Quick project summary
-Quick project summary
-Project Terms & Jargon
-Describe Project Dataset
-State Business Requirements
+* Quick project summary
+* Project Terms & Jargon
+* Describe Project Dataset
+* State Business Requirements
 
 Page 2: Data Visualization
+* Data Exploration
+* Categorical Data
+* Feature Scaling
 
 Page 4: Hypothesis
 
 Page 3: Model Selection
+* Model Selection
+* Test Model
 
 Page 4: Finalize Model/Conculsion
+* Finalize Model
+* Conclusion
 
 
 ## Unfixed Bugs
