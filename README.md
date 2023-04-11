@@ -65,10 +65,12 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 ## Business Requirements
 
 Business Requirement 1
-o	The client is interested in ways to create a model that can predict if a tumour is benign or malignant based on the given features.
+
+*	The client is interested conducting a study to differentiate weather a tumor is benign or malignant.
 
 Business Requirement 2
-o	The client is interested in predicting whether a given tumour has cancer or is benign with a high degree of accuracy.
+
+*	The client is interested in predicting whether a given tumour is malignant or benign based on the given features, with a high degree of accuracy.
 
 
 
@@ -76,7 +78,7 @@ o	The client is interested in predicting whether a given tumour has cancer or is
 
 * We beliveve that by looking at differant features we can differentiate between benign or malignant tumours.
 
-o This analysis aims to observe which features are most helpful in predicting malignant or benign cancer and to see general trends that may aid us in model selection and hyper parameter selection. The goal is to classify whether the breast cancer is benign or malignant. To achieve this i have used machine learning classification methods to fit a function that can predict the discrete class of new input.
+* This analysis aims to observe which features are most helpful in predicting malignant or benign cancer and to see general trends that may aid us in model selection and hyper  parameter selection. The goal is to classify whether the breast cancer is benign or malignant. To achieve this i have used machine learning classification methods to fit a function that can predict the discrete class of new input.
 
 
 ## The rationale to map the business requirements to the Data Visualizations and ML tasks
