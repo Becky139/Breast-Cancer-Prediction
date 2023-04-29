@@ -2,6 +2,7 @@ import plotly.express as px
 import numpy as np
 from feature_engine.discretisation import ArbitraryDiscretiser
 import streamlit as st
+from src.data_management import load_data
 
 
 import matplotlib.pyplot as plt
@@ -27,18 +28,20 @@ def page_data_anaylsis():
 
         st.write(df.head(10))
 
+    st.pyplot()
     st.write(
         f"* Observation: We can relatively say that the dataset is balanced.")
 
     # Correlation Study Summary
+    st.plotly_chart()
     st.write(
         f"Observation: There are a lot of features that have strong correlation to each other."
         f"We might need to a type of feature selection method. "
         f" First we need to check the baseline then we should decide if we need or not. "
-        f"The most correlated variable are: **{vars_to_study}**"
+        f"The most correlated variable are: "
     )
 
-    # Text based on "02 - Churned Customer Study" notebook - "Conclusions and Next steps" section
+    # Text based on "02 - " notebook - "Conclusions and Next steps" section
     st.info(
         f"The correlation indications and plots below interpretation converge. "
         f"It is indicated that: \n"
