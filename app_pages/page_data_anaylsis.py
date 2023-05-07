@@ -28,27 +28,7 @@ def page_data_anaylsis():
 
         st.write(df.head(10))
 
-    st.pyplot()
-    st.write(
-        f"* Observation: We can relatively say that the dataset is balanced.")
+ 
+    # Chart
 
-    # Correlation Study Summary
-    st.plotly_chart()
-    st.write(
-        f"Observation: There are a lot of features that have strong correlation to each other."
-        f"We might need to a type of feature selection method. "
-        f" First we need to check the baseline then we should decide if we need or not. "
-        f"The most correlated variable are: "
-    )
-
-    # Text based on "02 - " notebook - "Conclusions and Next steps" section
-    st.info(
-        f"The correlation indications and plots below interpretation converge. "
-        f"It is indicated that: \n"
-        f"* A churned customer typically has a month-to-month contract \n"
-        f"* A churned customer typically has fibre optic. \n"
-        f"* A churned customer typically doesn't have tech support. \n"
-        f"* A churned customer doesn't have online security. \n"
-        f"* A churned customer typically has low tenure levels. \n"
-    )
-
+    st.bar_chart()
