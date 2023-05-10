@@ -1,5 +1,6 @@
 import plotly.express as px
 import numpy as np
+import joblib
 from feature_engine.discretisation import ArbitraryDiscretiser
 import streamlit as st
 from src.data_management import load_data
@@ -30,5 +31,4 @@ def page_data_anaylsis():
 
  
     # Chart
-
-    st.bar_chart()
+    model_from_joblib =joblib.load("outputs/datasets/charts/diagnosis.pkl")
