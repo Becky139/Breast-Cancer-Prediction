@@ -31,4 +31,39 @@ def page_data_anaylsis():
 
  
     # Chart
-    model_from_joblib =joblib.load("outputs/datasets/charts/diagnosis.pkl")
+    st.write(
+        f"One of the main goals of visualizing the data here is to observe which features are most helpful in predicting malignant or benign cancer."
+        f"The other is to see general trends that may aid us in model selection and hyper parameter selection."
+
+        f"We will apply 3 techniques that you can use to understand each attribute of the dataset independently."
+
+        f"•	Histograms."
+
+        f"•	Density Plots."
+
+        f"•	Box and Whisker Plots.")
+    
+    st.image('outputs/datasets/charts/diagnosis.jpeg')
+    
+    st.write(
+        f"Histograms are commonly used to visualize numerical variables. A histogram is similar to a bar graph after the values of the variable are grouped (binned) into a finite number of intervals (bins)."
+
+        f"Histograms group data into bins and provide you a count of the number of observations in each bin. From the shape of the bins you can quickly get a feeling for whether an attribute is Gaussian, skewed or even has an exponential distribution. It can also help you see possible outliers."
+    )
+    
+    st.image('outputs/datasets/charts/histogram/_mean_suffix.jpg')
+    
+    st.image('outputs/datasets/charts/histogram/_se_suffix.jpg')
+    
+    st.image('outputs/datasets/charts/histogram/_worst_suffix.jpg')
+    
+    st.info(
+        "# Observation"
+
+        f"We can see that perhaps the attributes concavity,and concavity_point may have an exponential distribution ( )."
+        f"We can also see that perhaps the texture and smooth and symmetry attributes may have a Gaussian or nearly Gaussian distribution." 
+        f"This is interesting because many machine learning techniques assume a Gaussian univariate distribution on the input variables."
+    )
+    
+    st.image('outputs/datasets/charts/density/_mean_suffix.npy')
+    
