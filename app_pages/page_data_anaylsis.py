@@ -44,19 +44,19 @@ def page_data_anaylsis_body():
     
 
     # basic descriptive statistics
-            data.describe()
+    data.describe()
 
 
 
 
 
-            data["diagnosis"].replace({"B": 0, "M": 1}, inplace=True)
+    data["diagnosis"].replace({"B": 0, "M": 1}, inplace=True)
 
 
 
 
 
-            data.skew()
+    data.skew()
 
 
     st.markdown(">The skew result show a positive (right) or negative (left) skew. Values closer to zero show less skew.")
@@ -64,229 +64,206 @@ def page_data_anaylsis_body():
 
 
 
-            data.diagnosis.unique()
+    data.diagnosis.unique()
 
 
-            # M = 1 B = 0
+    # M = 1 B = 0
 
         
 
 
     # Group by diagnosis and review the output.
-            diag_gr=data.groupby('diagnosis', axis=0)
-            pd.DataFrame(diag_gr.size(), columns=['# of observations'])
+    diag_gr=data.groupby('diagnosis', axis=0)
+    pd.DataFrame(diag_gr.size(), columns=['# of observations'])
 
 
-            # Check binary encoding from NB1 to confirm the coversion of the diagnosis categorical data into numeric, where
-            # * Malignant = 1 (indicates prescence of cancer cells)
-            # * Benign = 0 (indicates abscence)
-            #
-            # ##### **Observation**
-            # > *357 observations indicating the absence of cancer cells and 212 show absence of cancer cell*
-            #
-            # Lets confirm this, by ploting the histogram
+    # Check binary encoding from NB1 to confirm the coversion of the diagnosis categorical data into numeric, where
+    # * Malignant = 1 (indicates prescence of cancer cells)
+    # * Benign = 0 (indicates abscence)
+    #
+    # ##### **Observation**
+    # > *357 observations indicating the absence of cancer cells and 212 show absence of cancer cell*
+    #
+    # Lets confirm this, by ploting the histogram
+
+
+    st.markdown(" # 2.3 Unimodal Data Visualizations")
+    
+    st.markdown(" One of the main goals of visualizing the data here is to observe which features are most helpful in predicting malignant or benign cancer. The other is to see general trends that may aid us in model selection and hyper parameter selection.")
+    
+    st.markdown("Apply 3 techniques that you can use to understand each attribute of your dataset independently.")
+    st.markdown("* Histograms.")
+    st.markdown("* Density Plots.")
+    st.markdown("* Box and Whisker Plots.")
+
+    
+
+
+    # lets get the frequency of cancer diagnosis
+    sns.set_style("white")
+    sns.set_context({"figure.figsize": (10, 8)})
+    sns.countplot(x=data['diagnosis'])
+    plt.show()
+
+
+    st.markdown(" ## 2.3.1 Visualise distribution of data via histograms")
+    st.markdown(" Histograms are commonly used to visualize numerical variables. A histogram is similar to a bar graph after the values of the variable are grouped (binned) into a finite number of intervals (bins).")
+    
+    st.markdown(" Histograms group data into bins and provide you a count of the number of observations in each bin. From the shape of the bins you can quickly get a feeling for whether an attribute is Gaussian, skewed or even has an exponential distribution. It can also help you see possible outliers.")
+
+    # ### Separate columns into smaller dataframes to perform visualization
+
+
+
+    # Break up columns into groups, according to their suffix designation
+    # (_mean, _se,
+    # and __worst) to perform visualisation plots off.
+    # Join the 'ID' and 'Diagnosis' back on
+    # data_id_diag=data.loc[:,["id","diagnosis"]]
+    data_diag=data.loc[:, ["diagnosis"]]
+
+    # For a merge + slice:
+    data_mean=data.iloc[:, 1:11]
+    data_se=data.iloc[:, 11:22]
+    data_worst=data.iloc[:, 23:]
+
+    # print(data_id_diag.columns)
+    print(data_mean.columns)
+    print(data_se.columns)
+    print(data_worst.columns)
+
+
+
+    # ### Histogram the "_mean" suffix designition
 
         
 
-            vars_to_study=['diagnosis']
+
+    # Plot histograms of CUT1 variables
+    hist_mean=data_mean.hist(bins=10, figsize=(15, 10), grid=False,)
+
+    # Any individual histograms, use this:
+    # df_cut['radius_worst'].hist(bins=100)
 
 
-            # # 2.3 Unimodal Data Visualizations
-            #
-            # One of the main goals of visualizing the data here is to observe which features are most helpful in predicting malignant or benign cancer. The other is to see general trends that may aid us in model selection and hyper parameter selection.
-            #
-            # Apply 3 techniques that you can use to understand each attribute of your dataset independently.
-            # * Histograms.
-            # * Density Plots.
-            # * Box and Whisker Plots.
-
-            # In[43]:
+    # ### __Histogram for  the "_se" suffix designition__
 
 
-            # lets get the frequency of cancer diagnosis
-            sns.set_style("white")
-            sns.set_context({"figure.figsize": (10, 8)})
-            sns.countplot(x=data['diagnosis'])
-            plt.show()
-
-            target_var='diagnosis'
+    # Plot histograms of _se variables
+    hist_se=data_se.hist(bins=10, figsize=(15, 10), grid=False,)
 
 
-            # ## 2.3.1 Visualise distribution of data via histograms
-            # Histograms are commonly used to visualize numerical variables. A histogram is similar to a bar graph after the values of the variable are grouped (binned) into a finite number of intervals (bins).
-            #
-            # Histograms group data into bins and provide you a count of the number of observations in each bin. From the shape of the bins you can quickly get a feeling for whether an attribute is Gaussian, skewed or even has an exponential distribution. It can also help you see possible outliers.
-
-            # ### Separate columns into smaller dataframes to perform visualization
-
-            # In[29]:
-
-
-            # Break up columns into groups, according to their suffix designation
-            # (_mean, _se,
-            # and __worst) to perform visualisation plots off.
-            # Join the 'ID' and 'Diagnosis' back on
-            # data_id_diag=data.loc[:,["id","diagnosis"]]
-            data_diag=data.loc[:, ["diagnosis"]]
-
-            # For a merge + slice:
-            data_mean=data.iloc[:, 1:11]
-            data_se=data.iloc[:, 11:22]
-            data_worst=data.iloc[:, 23:]
-
-            # print(data_id_diag.columns)
-            print(data_mean.columns)
-            print(data_se.columns)
-            print(data_worst.columns)
+    # ### __Histogram "_worst" suffix designition__
 
 
 
-            # ### Histogram the "_mean" suffix designition
-
-            # In[30]:
-
-
-            # Plot histograms of CUT1 variables
-            hist_mean=data_mean.hist(bins=10, figsize=(15, 10), grid=False,)
-
-            # Any individual histograms, use this:
-            # df_cut['radius_worst'].hist(bins=100)
+    # Plot histograms of _worst variables
+    hist_worst=data_worst.hist(bins=10, figsize=(15, 10), grid=False,)
 
 
-            # ### __Histogram for  the "_se" suffix designition__
+    st.markdown(" ### __Observation__")
+    
+    st.markdown(" >We can see that perhaps the attributes  **concavity**,and **concavity_point ** may have an exponential distribution ( ). We can also see that perhaps the texture and smooth and symmetry attributes may have a Gaussian or nearly Gaussian distribution. This is interesting because many machine learning techniques assume a Gaussian univariate distribution on the input variables.")
+    
 
-            # In[31]:
+    st.markdown(" ## 2.3.2 Visualize distribution of data via density plots")
 
-
-            # Plot histograms of _se variables
-            hist_se=data_se.hist(bins=10, figsize=(15, 10), grid=False,)
-
-
-            # ### __Histogram "_worst" suffix designition__
-
-            # In[32]:
+    # ### Density plots "_mean" suffix designition
 
 
-            # Plot histograms of _worst variables
-            hist_worst=data_worst.hist(bins=10, figsize=(15, 10), grid=False,)
 
-
-            # ### __Observation__
-            #
-            # >We can see that perhaps the attributes  **concavity**,and **concavity_point ** may have an exponential distribution ( ). We can also see that perhaps the texture and smooth and symmetry attributes may have a Gaussian or nearly Gaussian distribution. This is interesting because many machine learning techniques assume a Gaussian univariate distribution on the input variables.
-            #
-
-            # ## 2.3.2 Visualize distribution of data via density plots
-
-            # ### Density plots "_mean" suffix designition
-
-            # In[33]:
-
-
-            # Density Plots
-            plt=data_mean.plot(kind='density', subplots=True, layout=(4, 3), sharex=False,
+    # Density Plots
+    plt=data_mean.plot(kind='density', subplots=True, layout=(4, 3), sharex=False,
                                sharey=False, fontsize=12, figsize=(15, 10))
 
 
-            # ### Density plots "_se" suffix designition
+    # ### Density plots "_se" suffix designition
 
-            # In[34]:
-
-
-            # Density Plots
-            plt=data_se.plot(kind='density', subplots=True, layout=(4, 3), sharex=False,
+        
+    # Density Plots
+    plt=data_se.plot(kind='density', subplots=True, layout=(4, 3), sharex=False,
                              sharey=False, fontsize=12, figsize=(15, 10))
 
 
-            # ### Density plot "_worst" suffix designition
-
-            # In[35]:
+    # ### Density plot "_worst" suffix designition
 
 
-            # Density Plots
-            plt=data_worst.plot(kind='kde', subplots=True, layout=(4, 3), sharex=False, sharey=False, fontsize=5,
+    # Density Plots
+    plt=data_worst.plot(kind='kde', subplots=True, layout=(4, 3), sharex=False, sharey=False, fontsize=5,
                                 figsize=(15, 10))
 
 
-            # ### Observation
-            # >We can see that perhaps the attributes perimeter,radius, area, concavity,ompactness may have an exponential distribution ( ). We can also see that perhaps the texture and smooth and symmetry attributes may have a Gaussian or nearly Gaussian distribution. This is interesting because many machine learning techniques assume a Gaussian univariate distribution on the input variables.
+    st.markdown(" ### Observation")
+    st.markdown(" >We can see that perhaps the attributes perimeter,radius, area, concavity,ompactness may have an exponential distribution ( ). We can also see that perhaps the texture and smooth and symmetry attributes may have a Gaussian or nearly Gaussian distribution. This is interesting because many machine learning techniques assume a Gaussian univariate distribution on the input variables.")
 
-            # ## 2.3.3 Visualise distribution of data via box plots
+    # ## 2.3.3 Visualise distribution of data via box plots
 
-            # ### Box plot "_mean" suffix designition
-
-            # In[36]:
+    # ### Box plot "_mean" suffix designition
 
 
-            # box and whisker plots
-            plt=data_mean.plot(kind='box', subplots=True, layout=(
+    # box and whisker plots
+    plt=data_mean.plot(kind='box', subplots=True, layout=(
                 4, 4), sharex=False, sharey=False, fontsize=12)
 
 
-            # ### Box plot "_se" suffix designition
-
-            # In[37]:
+    # ### Box plot "_se" suffix designition
 
 
-            # box and whisker plots
-            plt=data_se.plot(kind='box', subplots=True, layout=(
+
+    # box and whisker plots
+    plt=data_se.plot(kind='box', subplots=True, layout=(
                 4, 4), sharex=False, sharey=False, fontsize=12)
 
 
-            # ### Box plot "_worst" suffix designition
-
-            # In[38]:
+    # ### Box plot "_worst" suffix designition
 
 
-            # box and whisker plots
-            plt=data_worst.plot(kind='box', subplots=True, layout=(
+
+
+    # box and whisker plots
+    plt=data_worst.plot(kind='box', subplots=True, layout=(
                 4, 4), sharex=False, sharey=False, fontsize=12)
 
 
-            # ### Observation
-            # >We can see that perhaps the attributes perimeter,radius, area, concavity,ompactness may have an exponential distribution ( ). We can also see that perhaps the texture and smooth and symmetry attributes may have a Gaussian or nearly Gaussian distribution. This is interesting because many machine learning techniques assume a Gaussian univariate distribution on the input variables.
+    st.markdown(" ### Observation")
+    st.markdown(" >We can see that perhaps the attributes perimeter,radius, area, concavity,ompactness may have an exponential distribution ( ). We can also see that perhaps the texture and smooth and symmetry attributes may have a Gaussian or nearly Gaussian distribution. This is interesting because many machine learning techniques assume a Gaussian univariate distribution on the input variables.")
 
-            # # 2.4 Multimodal Data Visualizations
-            # * Scatter plots
-            # * Correlation matrix
+    st.markdown("# 2.4 Multimodal Data Visualizations")
+    st.markdown(" * Scatter plots")
+    st.markdown(" * Correlation matrix")
 
-            # ### Correlation matrix
-
-            # In[39]:
+    st.markdown(" ### Correlation matrix")
 
 
-            # plot correlation matrix
-            plt.figure(figsize=(25, 12))
-            corr=data.corr()
-            sns.heatmap(corr, annot=True, cmap="YlGnBu",)
+
+    # plot correlation matrix
+    plt.figure(figsize=(25, 12))
+    corr=data.corr()
+    sns.heatmap(corr, annot=True, cmap="YlGnBu",)
 
 
-            # ### Observation:
-            # We can see strong positive relationship exists with mean values paramaters between 1-0.75;.
-            # * The mean area of the tissue nucleus has a strong positive correlation with mean values of radius and parameter;
-            # * Some paramters are moderately positive corrlated (r between 0.5-0.75)are concavity and area, concavity and perimeter etc
-            # * Likewise, we see some strong negative correlation between fractal_dimension with radius, texture, parameter mean values.
-            #
-
-            # In[40]:
+    st.markdown(" ### Observation:")
+    st.markdown(" We can see strong positive relationship exists with mean values paramaters between 1-0.75;.")
+    st.markdown(" * The mean area of the tissue nucleus has a strong positive correlation with mean values of radius and parameter;")
+    st.markdown(" * Some paramters are moderately positive corrlated (r between 0.5-0.75)are concavity and area, concavity and perimeter etc")
+    st.markdown(" * Likewise, we see some strong negative correlation between fractal_dimension with radius, texture, parameter mean values.")
+    
 
 
-            plt.style.use('fivethirtyeight')
-            sns.set_style("white")
 
-            g=sns.PairGrid(data[[data.columns[1], data.columns[2], data.columns[3],
+    plt.style.use('fivethirtyeight')
+    sns.set_style("white")
+
+    g=sns.PairGrid(data[[data.columns[1], data.columns[2], data.columns[3],
                                  data.columns[4], data.columns[5], data.columns[6]]], hue='diagnosis')
-            g=g.map_diag(plt.hist)
-            g=g.map_offdiag(plt.scatter, s=3)
+    g=g.map_diag(plt.hist)
+    g=g.map_offdiag(plt.scatter, s=3)
 
 
-            # ### Summary
-            #
-            # * Mean values of cell radius, perimeter, area, compactness, concavity
-            #     and concave points can be used in classification of the cancer. Larger
-            #     values of these parameters tends to show a correlation with malignant
-            #     tumors.
-            # * mean values of texture, smoothness, symmetry or fractual dimension
-            #     does not show a particular preference of one diagnosis over the other.
-            #
-            # * In any of the histograms there are no noticeable large outliers that warrants further cleanup.
+    st.markdown(" ### Summary")
+    
+    st.markdown(" * Mean values of cell radius, perimeter, area, compactness, concavity and concave points can be used in classification of the cancer. Larger values of these parameters tends to show a correlation with malignant tumors.")
+
+    st.markdown(" * mean values of texture, smoothness, symmetry or fractual dimension does not show a particular preference of one diagnosis over the other.")
+    
+    st.markdown(" * In any of the histograms there are no noticeable large outliers that warrants further cleanup.")
