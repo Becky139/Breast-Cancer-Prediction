@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-from src.data_management import load_telco_data, load_pkl_file
-from src.machine_learning.evaluate_clf import clf_performance
 
 
 def page_data_preprocesing_body():

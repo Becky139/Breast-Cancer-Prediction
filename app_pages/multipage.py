@@ -1,25 +1,48 @@
+# Contents of ~/my_app/streamlit_app.py
 import streamlit as st
 
 
-# Class to generate multiple Streamlit pages using an object oriented approach
-class MultiPage: 
+def page_summary_body():
+    st.markdown("# Project Summary 🎈")
+    st.sidebar.markdown("# Project Summary 🎈")
 
-    def __init__(self, app_name) -> None:
-        self.pages = []
-        self.app_name = app_name
 
-        st.set_page_config(
-            page_title=self.app_name,
-            page_icon="🖥️") # You may add an icon, to personalize your App
-        # check links below for additional icons reference
-        # https://docs.streamlit.io/en/stable/api.html#streamlit.set_page_config
-        # https://twemoji.maxcdn.com/2/test/preview.html
-    
-    def add_page(self, title, func) -> None: 
-        self.pages.append({"title": title, "function": func })
+def page_data_analyis_body():
+    st.markdown("# Data Analysis ❄️")
+    st.sidebar.markdown("# Data Analysis❄️")
 
-    def run(self):
-        st.title(self.app_name)
-        page = st.sidebar.radio('Menu', self.pages, format_func=lambda page: page['title'])
-        page['function']() 
+
+def page_data_preprocesing_body():
+    st.markdown("# Data Preprocessing 🎉")
+    st.sidebar.markdown("# Data Preprocessing 🎉")
+
+
+def page_predictive_model_body():
+    st.markdown("# Predictive Model 🎉")
+    st.sidebar.markdown("# Predictive Model 🎉")
+
+
+def page_project_hypothesis_body():
+    st.markdown("# Project Hypothesis 🎉")
+    st.sidebar.markdown("# Project Hypothesis 🎉")
+
+
+def page_model_compairson_body():
+    st.markdown("# Final Model 🎉")
+    st.sidebar.markdown("# Final Model 🎉"
+
+
+page_names_to_funcs = {
+    "Project Summary": page_summary_body,
+    "Data Analysis": page_data_anaylsis_body,
+    "Data Preprocessing": page_data_preprocesing_body,
+    "Predictive Model": page_predictive_model_body,
+    "Project Hypothesis": page_project_hypothesis_body,
+    "Final Model": page_model_compairson_body,
+}
+
+
+selected_page = st.sidebar.selectbox(
+    "Select a page", page_names_to_funcs.keys())
+    page_names_to_funcs[selected_page]()
 

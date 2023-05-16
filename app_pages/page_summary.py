@@ -1,6 +1,8 @@
 import streamlit as st
 
 def page_summary_body():
+    st.markdown("# Project Summary 🎈")
+    st.sidebar.markdown("# Project Summary 🎈")
 
     st.write("### Quick Project Summary")
 

@@ -2,6 +2,8 @@ import streamlit as st
 
 
 def page_project_hypothesis_body():
+    st.markdown("# Project Hypothesis 🎉")
+    st.sidebar.markdown("# Project Hypothesis 🎉")
 
     st.write("### Project Hypothesis and Validation")
 
