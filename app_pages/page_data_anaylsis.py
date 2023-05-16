@@ -3,19 +3,15 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import pandas as pd  # data processing, CSV file I/O (e.g. pd.read_csv)
 import numpy as np
+import joblib
 from scipy.stats import norm
 import seaborn as sns  # visualization
+from src.data_management import load_data, load_pkl_file
 
 
 def page_data_anaylsis_body():
     st.markdown("# Data Analysis ❄️")
     st.sidebar.markdown("# Data Analysis❄️")
-    @ st.cache(suppress_st_warning=True, allow_output_mutation=True)
-
-
-    def load_data():
-        data = pd.read_csv("outputs/datasets/cleaned/data.csv")
-        return data
 
     st.markdown(" ## 2.1 Objectives of Data Exploration")
 
@@ -44,19 +40,23 @@ def page_data_anaylsis_body():
     
 
     # basic descriptive statistics
-    data.describe()
+    
+    descriptive_statistics = load_pkl_file(
+        f'src/nb2/describe.pkl')
+    st.write(descriptive_statistics)
+    
 
 
 
 
 
-    data["diagnosis"].replace({"B": 0, "M": 1}, inplace=True)
+    #data["diagnosis"].replace({"B": 0, "M": 1}, inplace=True)
 
 
 
 
 
-    data.skew()
+    #data.skew()
 
 
     st.markdown(">The skew result show a positive (right) or negative (left) skew. Values closer to zero show less skew.")
