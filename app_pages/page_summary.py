@@ -6,26 +6,36 @@ def page_summary_body():
 
     # text based on README file - "Dataset Content" section
     st.info(
-        f"***Problem Statement**"
-        f"*Breast cancer is the most common malignancy among women, accounting for nearly 1 in 3 cancers diagnosed among women in the United States, and it is the second leading cause of cancer death among women.\n"
-        f"*Breast Cancer occurs as a result of abnormal growth of cells in the breast tissue, commonly referred to as a Tumor.\n"
-        f"*A tumor does not mean cancer - tumors can be benign (not cancerous), pre-malignant (pre-cancerous), or malignant (cancerous).\n "
-        f"*Tests such as MRI, mammogram, ultrasound, and biopsy are commonly used to diagnose breast cancer performed.\n"
-         
-        f"Given breast cancer results from breast fine-needle aspiration (FNA) test (is a quick and simple procedure to perform, which removes some fluid or cells from a breast lesion or cyst (a lump, sore, or swelling) with a fine needle similar to a blood sample needle). Since this build a model that can classify a breast cancer tumor using two training classification:\n"
-        f"* 1 = Malignant (Cancerous) - Present\n"
-        f"* 0 = Benign (Not Cancerous) -Absent\n")
+        f"**Project Terms & Jargon**\n"
+        f"* A **customer** is a person who consumes your service or product.\n"
+        f"* A **prospect** is a potential customer.\n"
+        f"* A **churned** customer is a user who has stopped using your product or service.\n "
+        f"* This customer has a **tenure** level, the number of months this person " 
+        f"has used our product/service.\n\n"
+        f"**Project Dataset**\n"
+        f"* The dataset represents a **customer base from a Telco company** "
+        f"containing individual customer data on the products and services "
+        f"(like internet type, online security, online backup, tech support), "
+        f"account information (like contract type, payment method, monthly charges) "
+        f"and profile (like gender, partner, dependents).")
 
     # Link to README file, so the users can have access to full project documentation
     st.write(
         f"* For additional information, please visit and **read** the "
-        f"[Project README file](https://github.com/breast-cancer-prediction/README.md).")
+        f"[Project README file](https://github.com/Code-Institute-Solutions/churnometer).")
     
 
     # copied from README file - "Business Requirements" section
     st.success(
         f"The project has 2 business requirements:\n"
-        f"* 1 - The client is interested conducting a study to differentiate weather a tumor is benign or malignant.\n"
-        
-        f"* 2 - The client is interested in predicting whether a given tumour is malignant or benign based on the given features, with a high degree of accuracy.\n "
+        f"* 1 - The client is interested in understanding the patterns from the customer base "
+        f"so that the client can learn the most relevant variables that are correlated to a "
+        f"churned customer.\n"
+        f"* 2 - The client is interested in determining whether or not a given prospect will churn. "
+        f"If so, the client is interested to know when. In addition, the client is "
+        f"interested in learning from which cluster this prospect will belong in the customer base. "
+        f"Based on that, present potential factors that could maintain and/or bring  "
+        f"the prospect to a non-churnable cluster."
         )
+
+        
