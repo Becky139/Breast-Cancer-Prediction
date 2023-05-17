@@ -2,17 +2,16 @@ import streamlit as st
 
 
 def page_project_hypothesis_body():
-    st.markdown("# Project Hypothesis 🎉")
-    st.sidebar.markdown("# Project Hypothesis 🎉")
+    st.markdown("# Project Hypothesis 💡")
+    st.sidebar.markdown("# Project Hypothesis 💡")
 
     st.write("### Project Hypothesis and Validation")
 
     # conclusions taken from "02 - Churned Customer Study" notebook
     st.success(
-        f"* We suspect customers are churning with low tenure levels: Correct. "
-        f"The correlation study at Churned Customer Study supports that. \n\n"
+        f"* We beliveve that by looking at differant features we can differentiate between benign or malignant tumours. "
+        f" \n\n"
 
-        f"* A customer survey showed our customers appreciate fibre Optic. "
-        f"A churned user typically has Fibre Optic, as demonstrated by a Churned Customer Study. "
-        f"This insight will be used by the survey team for further discussions and investigations."
+        f"* This analysis aims to observe which features are most helpful in predicting malignant or benign cancer and to see general trends that may aid us in model selection and hyper  parameter selection. "
+        f"The goal is to classify whether the breast cancer is benign or malignant. To achieve this i have used machine learning classification methods to fit a function that can predict the discrete class of new input. "
     )
