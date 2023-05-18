@@ -6,7 +6,6 @@ import numpy as np
 import joblib
 from scipy.stats import norm
 import seaborn as sns  # visualization
-from src.data_management import load_data, load_pkl_file
 
 
 def page_data_anaylsis_body():
