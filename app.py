@@ -11,11 +11,6 @@ def page_data_preprocesing_body():
     st.sidebar.markdown("# Data Preprocessing 🎉")
 
 
-def page_predictive_model_body():
-    st.markdown("# Predictive Model 🎉")
-    st.sidebar.markdown("# Predictive Model 🎉")
-
-
 
 
 
@@ -28,6 +23,7 @@ page_names_to_funcs = {
     "Project Summary": page_summary_body,
     "Data Anaylsis": page_data_anaylsis_body,
     "Project Hypothesis": page_project_hypothesis_body,
+    "Predictive Model":page_predictive_model_body,
 }
 
 

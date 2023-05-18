@@ -200,3 +200,54 @@ def page_data_anaylsis_body():
 
     st.markdown(
         " * In any of the histograms there are no noticeable large outliers that warrants further cleanup.")
+
+
+    st.markdown('# Data Pre-Processing the data')
+
+    st.markdown('[Data preprocessing](http://www.cs.ccsu.edu/~markov/ccsu_courses/datamining-3.html) is a crucial step for any data analysis problem.  It is often a very good idea to prepare your data in such way to best expose the structure of the problem to the machine learning algorithms that you intend to use.This involves a number of activities such as:')
+    st.markdown('* Assigning numerical values to categorical data;')
+    st.markdown('* Handling missing values; and')
+    st.markdown('* Normalizing the features (so that features on small scales do not dominate when fitting a model to the data).')
+
+    st.markdown('### Goal:')
+
+    st.markdown('Find the most predictive features of the data and filter it so it will enhance the predictive power of the analytics model.') 
+
+    st.markdown('#### Load data and essential libraries')
+
+    st.markdown('#### Feature Standardization')
+ 
+    st.markdown('* Standardization is a useful technique to transform attributes with a Gaussian distribution and differing means and standard deviations to a standard Gaussian distribution with a mean of 0 and a standard deviation of 1.') 
+
+    st.markdown('* As seen in [NB2_Exploratory data analysis](https://github.com/ShiroJean/Breast-cancer-risk-prediction/blob/master/NB2_ExploratoryDataAnalysis.ipynb) the raw data has differing distributions which may have an impact on the most ML algorithms. Most machine learning and optimization algorithms behave much better if features are on the same scale.')
+
+
+    st.markdown('Let’s evaluate the same algorithms with a standardized copy of the dataset. Here, I use sklearn to scale and transform the data such that each attribute has a mean value of zero and a standard deviation of one')
+# 
+
+
+    st.image('src/nb3/pca.jpeg')
+
+    st.markdown('Now, what we got after applying the linear PCA transformation is a lower dimensional subspace (from 3D to 2D in this case), where the samples are “most spread” along the new feature axes.')
+
+    st.markdown('## Deciding How Many Principal Components to Retain')
+
+    st.markdown('In order to decide how many principal components should be retained, it is common to summarise the results of a principal components analysis by making a scree plot. More about scree plot can be found [here](http://python-for-multivariate-analysis.readthedocs.io/a_little_book_of_python_for_multivariate_analysis.html), and [hear](https://www.analyticsvidhya.com/blog/2016/03/practical-guide-principal-component-analysis-python/)')
+
+    st.image('src/nb3/scree.jpeg')
+
+    st.markdown('#### Observation')
+    st.markdown('The most obvious change in slope in the scree plot occurs at component 2, which is the “elbow” of the scree plot. Therefore, it cound be argued based on the basis of the scree plot that the first three components should be retained.')
+
+    st.markdown('### A Summary of the Data Preprocing Approach used here:')
+    
+    st.markdown('1. assign features to a NumPy array X, and transform the class labels from their original string representation (M and B) into integers')
+    st.markdown('2. Split data into training and test sets')
+    st.markdown('3. Standardize the data.')
+    st.markdown('4. Obtain the Eigenvectors and Eigenvalues from the covariance matrix or correlation matrix')
+    st.markdown('5. Sort eigenvalues in descending order and choose the kk eigenvectors that correspond to the kk largest eigenvalues where k is the number of dimensions of the new feature subspace (k≤dk≤d).')
+    st.markdown('6. Construct the projection matrix W from the selected k eigenvectors.')
+    st.markdown('7. Transform the original dataset X via W to obtain a k-dimensional feature subspace Y.')
+
+    st.markdown('It is common to select a subset of features that have the largest correlation with the class labels. The effect of feature selection must be assessed within a complete modeling pipeline in order to give you an unbiased estimated of your models true performance. Hence, in the next section you will first be introduced to cross-validation, before applying the PCA-based feature selection strategy in the model building pipeline.')
+
