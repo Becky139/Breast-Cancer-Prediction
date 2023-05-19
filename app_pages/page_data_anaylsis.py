@@ -104,8 +104,8 @@ def page_data_anaylsis_body():
 
     # print(data_id_diag.columns)
     # print(data_mean.columns)
-   # print(data_se.columns)
-   # print(data_worst.columns)
+    # print(data_se.columns)
+    # print(data_worst.columns)
 
     # ### Histogram the "_mean" suffix designition
     st.image('src/nb2/hist_mean.jpeg')
@@ -135,12 +135,9 @@ def page_data_anaylsis_body():
 
     # Density Plots
     st.image('src/nb2/density_mean.jpeg')
-  
-
     
     st.info('### Density plots "_se" suffix designition') 
     
-
     # Density Plots
     st.image('src/nb2/density_se.jpeg')
 
