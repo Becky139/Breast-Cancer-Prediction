@@ -1,4 +1,7 @@
 import streamlit as st
+import pandas as pd
+import plotly.express as px
+import matplotlib.pyplot as plt
 
 
 def page_model_compairson_body():
@@ -6,7 +9,7 @@ def page_model_compairson_body():
     st.sidebar.markdown("# Final Model 💽")
 
 
-st.markdown('# NB6 Comparison Between Different Classifiers')
+st.markdown('# Comparison Between Different Classifiers')
 
 st.markdown('## Automate the ML process using pipelines')
 
