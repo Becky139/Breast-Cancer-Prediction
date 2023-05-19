@@ -2,8 +2,8 @@ import streamlit as st
 
 
 def page_model_compairson_body():
-    st.markdown("# Final Model 🎉")
-    st.sidebar.markdown("# Final Model 🎉")
+    st.markdown("# Final Model 💽")
+    st.sidebar.markdown("# Final Model 💽")
 
 
 st.markdown('# NB6 Comparison Between Different Classifiers')

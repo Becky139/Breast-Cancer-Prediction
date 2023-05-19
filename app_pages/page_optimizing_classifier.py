@@ -5,6 +5,8 @@ import plotly.express as px
 
 
 def page_optimizing_classifier_body():
+    st.markdown("# Optimizing Classifier 🚀")
+    st.sidebar.markdown("# Optimizing Classifier 🚀")
 
     st.markdown('# Optimizing the SVM Classifier')
 
