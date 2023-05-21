@@ -12,7 +12,7 @@ def page_data_anaylsis_body():
     st.markdown("# Data Analysis 📊")
     st.sidebar.markdown("# Data Analysis📊")
 
-    st.markdown(" ## 2.1 Objectives of Data Exploration")
+    st.title("Objectives of Data Exploration")
 
     st.markdown("Exploratory data analysis (EDA) is a very important step which takes place after feature engineering and acquiring data and it should be done before any modeling. This is because it is very important for a data scientist to be able to understand the nature of the data without making assumptions. The results of data exploration can be extremely useful in grasping the structure of the data, the distribution of the values, and the presence of extreme values and interrelationships within the data set.")
 
@@ -35,19 +35,11 @@ def page_data_anaylsis_body():
 
     st.markdown("2. ***Visualization*** is the process of projecting the data, or parts of it, into Cartesian space or into abstract images. In the data mining process, data exploration is leveraged in many different steps including preprocessing, modeling, and interpretation of results.")
 
-    st.markdown("# 2.2 Descriptive statistics")
+    st.title("Descriptive statistics")
     st.markdown(
         "Summary statistics are measurements meant to describe data. In the field of descriptive statistics, there are many [summary measurements](http://www.saedsayad.com/numerical_variables.htm)")
 
-    # basic descriptive statistics
-
-    # descriptive_statistics = load_pkl_file(
-    #   f'src/nb2/describe.pkl')
-    # st.write(descriptive_statistics)
-
-    # data["diagnosis"].replace({"B": 0, "M": 1}, inplace=True)
-
-    # data.skew()
+    st.markdown("skew")
 
     st.markdown(
         ">The skew result show a positive (right) or negative (left) skew. Values closer to zero show less skew.")
@@ -61,16 +53,22 @@ def page_data_anaylsis_body():
     # diag_gr=data.groupby('diagnosis', axis=0)
     # pd.DataFrame(diag_gr.size(), columns=['# of observations'])
 
-    # Check binary encoding from NB1 to confirm the coversion of the diagnosis categorical data into numeric, where
-    # * Malignant = 1 (indicates prescence of cancer cells)
-    # * Benign = 0 (indicates abscence)
-    #
-    # ##### **Observation**
-    # > *357 observations indicating the absence of cancer cells and 212 show absence of cancer cell*
-    #
-    # Lets confirm this, by ploting the histogram
+    
 
-    st.markdown(" # 2.3 Unimodal Data Visualizations")
+    st.title("Unimodal Data Visualizations")
+
+    # lets get the frequency of cancer diagnosis
+    st.image('src/nb2/diagnosis.jpeg')
+
+    st.markdown("Check binary encoding from NB1 to confirm the coversion of the diagnosis categorical data into numeric, where")
+    st.markdown("* Malignant = 1 (indicates prescence of cancer cells)")
+    st.markdown("* Benign = 0 (indicates abscence)")
+    
+    st.info("**Observation**")
+    st.info("*357 observations indicating the absence of cancer cells and 212 show absence of cancer cell *")
+    
+    st.markdown("Lets confirm this, by ploting the histogram")
+
 
     st.markdown(" One of the main goals of visualizing the data here is to observe which features are most helpful in predicting malignant or benign cancer. The other is to see general trends that may aid us in model selection and hyper parameter selection.")
 
@@ -80,56 +78,36 @@ def page_data_anaylsis_body():
     st.markdown("* Density Plots.")
     st.markdown("* Box and Whisker Plots.")
 
-    # lets get the frequency of cancer diagnosis
-    st.image('src/nb2/diagnosis.jpeg')
-
-    st.markdown(" ## 2.3.1 Visualise distribution of data via histograms")
+    st.title("Visualise distribution of data via histograms")
     st.markdown(" Histograms are commonly used to visualize numerical variables. A histogram is similar to a bar graph after the values of the variable are grouped (binned) into a finite number of intervals (bins).")
 
     st.markdown(" Histograms group data into bins and provide you a count of the number of observations in each bin. From the shape of the bins you can quickly get a feeling for whether an attribute is Gaussian, skewed or even has an exponential distribution. It can also help you see possible outliers.")
 
-    # ### Separate columns into smaller dataframes to perform visualization
+    st.markdown("Separate columns into smaller dataframes to perform visualization. Break up columns into groups, according to their suffix designation")
 
-    # Break up columns into groups, according to their suffix designation
-    # (_mean, _se,
-    # and __worst) to perform visualisation plots off.
-    # Join the 'ID' and 'Diagnosis' back on
-    # data_id_diag=data.loc[:,["id","diagnosis"]]
-    # data_diag=data.loc[:, ["diagnosis"]]
+    st.markdown("1. data_mean.columns")
+    st.markdown("2. data_se.columns")
+    st.markdown("3. data_worst.columns")
 
-    # For a merge + slice:
-    # data_mean=data.iloc[:, 1:11]
-    # data_se=data.iloc[:, 11:22]
-    # data_worst=data.iloc[:, 23:]
+    st.info("### Histogram the _mean suffix designition")
 
-    # print(data_id_diag.columns)
-    # print(data_mean.columns)
-    # print(data_se.columns)
-    # print(data_worst.columns)
-
-    # ### Histogram the "_mean" suffix designition
+    # Plot histograms of _mean variables
     st.image('src/nb2/hist_mean.jpeg')
 
-    # Plot histograms of CUT1 variables
-
-    # Any individual histograms, use this:
-    # df_cut['radius_worst'].hist(bins=100)
-
-    # ### __Histogram for  the "_se" suffix designition__
+    st.info("### Histogram for  the _se suffix designition")
 
     # Plot histograms of _se variables
     st.image('src/nb2/hist_se.jpeg')
 
-    # ### __Histogram "_worst" suffix designition__
+    st.info("### Histogram _worst suffix designition")
 
     # Plot histograms of _worst variables
     st.image('src/nb2/hist_worst.jpeg')
 
-    st.markdown(" ### __Observation__")
+    st.success("Observation")
+    st.markdown("We can see that perhaps the attributes  **concavity**,and **concavity_point ** may have an exponential distribution ( ). We can also see that perhaps the texture and smooth and symmetry attributes may have a Gaussian or nearly Gaussian distribution. This is interesting because many machine learning techniques assume a Gaussian univariate distribution on the input variables")
 
-    st.markdown(" >We can see that perhaps the attributes  **concavity**,and **concavity_point ** may have an exponential distribution ( ). We can also see that perhaps the texture and smooth and symmetry attributes may have a Gaussian or nearly Gaussian distribution. This is interesting because many machine learning techniques assume a Gaussian univariate distribution on the input variables.")
-
-    st.markdown(" ## 2.3.2 Visualize distribution of data via density plots")
+    st.title("Visualize distribution of data via density plots")
 
     st.info('### Density plots "_mean" suffix designition')
 
@@ -146,10 +124,10 @@ def page_data_anaylsis_body():
     # Density Plots
     st.image('src/nb2/density_worst.jpeg')
 
-    st.markdown(" ### Observation")
-    st.markdown(" >We can see that perhaps the attributes perimeter,radius, area, concavity,ompactness may have an exponential distribution ( ). We can also see that perhaps the texture and smooth and symmetry attributes may have a Gaussian or nearly Gaussian distribution. This is interesting because many machine learning techniques assume a Gaussian univariate distribution on the input variables.")
+    st.success("### Observation")
+    st.markdown("We can see that perhaps the attributes perimeter,radius, area, concavity,ompactness may have an exponential distribution ( ). We can also see that perhaps the texture and smooth and symmetry attributes may have a Gaussian or nearly Gaussian distribution. This is interesting because many machine learning techniques assume a Gaussian univariate distribution on the input variables.")
 
-    st.title('##  Visualise distribution of data via box plots')
+    st.title('Visualise distribution of data via box plots')
 
     st.info('### Box plot "_mean" suffix designition')
 
@@ -166,19 +144,20 @@ def page_data_anaylsis_body():
     # box and whisker plots
     st.image('src/nb2/boxplot_worst.jpeg')
 
-    st.markdown(" ### Observation")
-    st.markdown(" >We can see that perhaps the attributes perimeter,radius, area, concavity,ompactness may have an exponential distribution ( ). We can also see that perhaps the texture and smooth and symmetry attributes may have a Gaussian or nearly Gaussian distribution. This is interesting because many machine learning techniques assume a Gaussian univariate distribution on the input variables.")
+    st.success("### Observation")
+    st.markdown("We can see that perhaps the attributes perimeter,radius, area, concavity,ompactness may have an exponential distribution ( ). We can also see that perhaps the texture and smooth and symmetry attributes may have a Gaussian or nearly Gaussian distribution. This is interesting because many machine learning techniques assume a Gaussian univariate distribution on the input variables.")
 
-    st.markdown("# 2.4 Multimodal Data Visualizations")
-    st.markdown(" * Scatter plots")
+    st.title("Multimodal Data Visualizations")
     st.markdown(" * Correlation matrix")
+    st.markdown(" * Scatter plots")
+    
 
     st.markdown(" ### Correlation matrix")
 
     # plot correlation matrix
     st.image('src/nb2/correlation.jpeg')
 
-    st.markdown(" ### Observation:")
+    st.success(" ### Observation:")
     st.markdown(
         " We can see strong positive relationship exists with mean values paramaters between 1-0.75;.")
     st.markdown(
@@ -186,9 +165,10 @@ def page_data_anaylsis_body():
     st.markdown(" * Some paramters are moderately positive corrlated (r between 0.5-0.75)are concavity and area, concavity and perimeter etc")
     st.markdown(" * Likewise, we see some strong negative correlation between fractal_dimension with radius, texture, parameter mean values.")
 
+    st.title("Scatter Plots")
     st.image('src/nb2/scatter.jpeg')
 
-    st.markdown(" ### Summary")
+    st.success(" ### Summary")
 
     st.markdown(" * Mean values of cell radius, perimeter, area, compactness, concavity and concave points can be used in classification of the cancer. Larger values of these parameters tends to show a correlation with malignant tumors.")
 
@@ -197,14 +177,14 @@ def page_data_anaylsis_body():
     st.markdown(
         " * In any of the histograms there are no noticeable large outliers that warrants further cleanup.")
 
-    st.markdown('# Data Pre-Processing the data')
+    st.title('Data Pre-Processing the data')
 
     st.markdown('[Data preprocessing](http://www.cs.ccsu.edu/~markov/ccsu_courses/datamining-3.html) is a crucial step for any data analysis problem.  It is often a very good idea to prepare your data in such way to best expose the structure of the problem to the machine learning algorithms that you intend to use.This involves a number of activities such as:')
     st.markdown('* Assigning numerical values to categorical data;')
     st.markdown('* Handling missing values; and')
     st.markdown('* Normalizing the features (so that features on small scales do not dominate when fitting a model to the data).')
 
-    st.markdown('### Goal:')
+    st.title('Goal:')
 
     st.markdown('Find the most predictive features of the data and filter it so it will enhance the predictive power of the analytics model.')
 
@@ -228,10 +208,10 @@ def page_data_anaylsis_body():
 
     st.image('src/nb3/scree.jpeg')
 
-    st.markdown('#### Observation')
+    st.success('#### Observation')
     st.markdown('The most obvious change in slope in the scree plot occurs at component 2, which is the “elbow” of the scree plot. Therefore, it cound be argued based on the basis of the scree plot that the first three components should be retained.')
 
-    st.markdown('### A Summary of the Data Preprocing Approach used here:')
+    st.success('### A Summary of the Data Preprocing Approach used here:')
 
     st.markdown('1. assign features to a NumPy array X, and transform the class labels from their original string representation (M and B) into integers')
     st.markdown('2. Split data into training and test sets')
