@@ -81,7 +81,7 @@ def page_predictive_model_body():
     st.markdown(
         '* In reality, 64 patients in the sample have the disease, and 107 patients do not.')
 
-    st.markdown('#### Rates as computed from the confusion matrix')
+    st.info('### Rates as computed from the confusion matrix')
 
     st.markdown(
         '     * (FP+FN)/total = (1+7)/171 = 0.05 equivalent to 1 minus Accuracy also known as ***"Error Rate"***')
@@ -129,7 +129,8 @@ def page_predictive_model_body():
 
     st.info('### Build a predictive model and evaluate with 5-cross validation using support vector classifies (ref NB4) for details')
 
-    st.image('src/nb5/svm_classification_report.png')
+    st.image('src/nb5/accuracy_report.png')
+    st.image('src/nb5/classification_report.jpeg')
 
     st.info('### Importance of Optimizing a Classifier')
 
@@ -144,13 +145,14 @@ def page_predictive_model_body():
     st.markdown('* Grid Search Parameter Tuning.')
     st.markdown('* Random Search Parameter Tuning.')
 
-    st.image('src/nb5/grid_svc_classification.png')
+    st.image('src/nb5/grid_svc_accuracy.png')
+    st.image('src/nb5/grid_svc_classification.jpeg')
 
     st.info('### Decision Boundaries of Different Classifiers')
     st.markdown(
         'Lets see the decision boundaries produced by the linear, Gaussian and polynomial classifiers.')
 
-    st.image('src/nb5/svc_linear.png')
+    st.image('src/nb5/svc_charts.jpeg')
 
     st.success('## Conclusion')
 

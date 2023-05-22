@@ -30,7 +30,7 @@ def page_model_comparison_body():
     st.success('### Observation')
     st.markdown('The results suggest That both Logistic Regression and LDA may be worth further study. These are just mean accuracy values. It is always wise to look at the distribution of accuracy values calculated across cross validation folds. We can do that graphically using box and whisker plots.')
 
-    # image
+    st.image('src/nb6/accuracy_baseline.png')
 
     st.success('### Observation')
     st.markdown('The results show a similar tight distribution for all classifiers except SVM which is encouraging, suggesting low variance. The poor results for SVM are surprising.')
