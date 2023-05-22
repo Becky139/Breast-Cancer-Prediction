@@ -7,7 +7,7 @@ def page_project_hypothesis_body():
 
     st.write("### Project Hypothesis and Validation")
 
-    # conclusions taken from "02 - Churned Customer Study" notebook
+    # Hypothesis taen from readme file
     st.success(
         f"* We beliveve that by looking at differant features we can differentiate between benign or malignant tumours. "
         f" \n\n"

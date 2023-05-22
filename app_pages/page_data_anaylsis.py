@@ -1,11 +1,5 @@
 # Load libraries for data processing
 import streamlit as st
-import matplotlib.pyplot as plt
-import pandas as pd  # data processing, CSV file I/O (e.g. pd.read_csv)
-import numpy as np
-import joblib
-from scipy.stats import norm
-import seaborn as sns  # visualization
 
 
 def page_data_anaylsis_body():
@@ -35,7 +29,7 @@ def page_data_anaylsis_body():
 
     st.markdown("2. ***Visualization*** is the process of projecting the data, or parts of it, into Cartesian space or into abstract images. In the data mining process, data exploration is leveraged in many different steps including preprocessing, modeling, and interpretation of results.")
 
-    st.title("Descriptive statistics")
+    st.info("### Descriptive statistics")
     st.markdown(
         "Summary statistics are measurements meant to describe data. In the field of descriptive statistics, there are many [summary measurements](http://www.saedsayad.com/numerical_variables.htm)")
 
@@ -45,17 +39,7 @@ def page_data_anaylsis_body():
         ">The skew result show a positive (right) or negative (left) skew. Values closer to zero show less skew.")
     st.markdown("From the graphs, we can see that **radius_mean**, **perimeter_mean**, **area_mean**, **concavity_mean** and **concave_points_mean** are useful in predicting cancer type due to the distinct grouping between malignant and benign cancer types in these features. We can also see that area_worst and perimeter_worst are also quite useful.")
 
-    # data.diagnosis.unique()
-
-    # M = 1 B = 0
-
-    # Group by diagnosis and review the output.
-    # diag_gr=data.groupby('diagnosis', axis=0)
-    # pd.DataFrame(diag_gr.size(), columns=['# of observations'])
-
-    
-
-    st.title("Unimodal Data Visualizations")
+    st.info("### Unimodal Data Visualizations")
 
     # lets get the frequency of cancer diagnosis
     st.image('src/nb2/diagnosis.jpeg')
@@ -63,12 +47,11 @@ def page_data_anaylsis_body():
     st.markdown("Check binary encoding from NB1 to confirm the coversion of the diagnosis categorical data into numeric, where")
     st.markdown("* Malignant = 1 (indicates prescence of cancer cells)")
     st.markdown("* Benign = 0 (indicates abscence)")
-    
-    st.info("**Observation**")
-    st.info("*357 observations indicating the absence of cancer cells and 212 show absence of cancer cell *")
-    
-    st.markdown("Lets confirm this, by ploting the histogram")
 
+    st.success("**Observation**")
+    st.markdown("*357 observations indicating the absence of cancer cells and 212 show absence of cancer cell *")
+
+    st.markdown("Lets confirm this, by ploting the histogram")
 
     st.markdown(" One of the main goals of visualizing the data here is to observe which features are most helpful in predicting malignant or benign cancer. The other is to see general trends that may aid us in model selection and hyper parameter selection.")
 
@@ -147,12 +130,11 @@ def page_data_anaylsis_body():
     st.success("### Observation")
     st.markdown("We can see that perhaps the attributes perimeter,radius, area, concavity,ompactness may have an exponential distribution ( ). We can also see that perhaps the texture and smooth and symmetry attributes may have a Gaussian or nearly Gaussian distribution. This is interesting because many machine learning techniques assume a Gaussian univariate distribution on the input variables.")
 
-    st.title("Multimodal Data Visualizations")
+    st.info("## Multimodal Data Visualizations")
     st.markdown(" * Correlation matrix")
     st.markdown(" * Scatter plots")
-    
 
-    st.markdown(" ### Correlation matrix")
+    st.info(" ### Correlation matrix")
 
     # plot correlation matrix
     st.image('src/nb2/correlation.jpeg')
@@ -165,7 +147,7 @@ def page_data_anaylsis_body():
     st.markdown(" * Some paramters are moderately positive corrlated (r between 0.5-0.75)are concavity and area, concavity and perimeter etc")
     st.markdown(" * Likewise, we see some strong negative correlation between fractal_dimension with radius, texture, parameter mean values.")
 
-    st.title("Scatter Plots")
+    st.info("### Scatter Plots")
     st.image('src/nb2/scatter.jpeg')
 
     st.success(" ### Summary")
@@ -184,11 +166,9 @@ def page_data_anaylsis_body():
     st.markdown('* Handling missing values; and')
     st.markdown('* Normalizing the features (so that features on small scales do not dominate when fitting a model to the data).')
 
-    st.title('Goal:')
+    st.info('### Goal:')
 
     st.markdown('Find the most predictive features of the data and filter it so it will enhance the predictive power of the analytics model.')
-
-    st.markdown('#### Load data and essential libraries')
 
     st.markdown('#### Feature Standardization')
 
@@ -200,9 +180,9 @@ def page_data_anaylsis_body():
 
     st.image('src/nb3/pca.jpeg')
 
-    st.markdown('Now, what we got after applying the linear PCA transformation is a lower dimensional subspace (from 3D to 2D in this case), where the samples are “most spread” along the new feature axes.')
+    st.success('Now, what we got after applying the linear PCA transformation is a lower dimensional subspace (from 3D to 2D in this case), where the samples are “most spread” along the new feature axes.')
 
-    st.markdown('## Deciding How Many Principal Components to Retain')
+    st.info('## Deciding How Many Principal Components to Retain')
 
     st.markdown('In order to decide how many principal components should be retained, it is common to summarise the results of a principal components analysis by making a scree plot. More about scree plot can be found [here](http://python-for-multivariate-analysis.readthedocs.io/a_little_book_of_python_for_multivariate_analysis.html), and [hear](https://www.analyticsvidhya.com/blog/2016/03/practical-guide-principal-component-analysis-python/)')
 
