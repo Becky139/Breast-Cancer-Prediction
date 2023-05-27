@@ -25,7 +25,7 @@ def page_model_comparison_body():
 
     st.info('## Evaluate Algorithms: Baseline')
 
-    st.image('src/nb6/six_classifiers.png')
+    st.image('outputs/nb6/six_classifiers.png')
 
     st.success('### Observation')
     st.markdown('The results suggest That both Logistic Regression and LDA may be worth further study. These are just mean accuracy values. It is always wise to look at the distribution of accuracy values calculated across cross validation folds. We can do that graphically using box and whisker plots.')
@@ -39,9 +39,9 @@ def page_model_comparison_body():
 
     st.info('### Evaluate Algorithms: Standardize Data')
 
-    st.image('src/nb6/standardize_data.png')
+    st.image('outputs/nb6/standardize_data.png')
 
-    st.image('src/nb6/scaled_algorithm.png')
+    st.image('outputs/nb6/scaled_algorithm.png')
 
     st.success('#### Observations')
     st.markdown('The results show that standardization of the data has lifted the skill of SVM to be the most accurate algorithm tested so far.')
@@ -53,7 +53,7 @@ def page_model_comparison_body():
 
     st.info('### Tuning hyper-parameters - SVC estimator')
 
-    st.image('src/nb6/model_training_accuracy_svc.png')
+    st.image('outputs/nb6/model_training_accuracy_svc.png')
 
     st.info('### Tuning the hyper-parameters - k-NN hyperparameters')
     st.markdown('For your standard k-NN implementation, there are two primary hyperparameters that you’ll want to tune:')
@@ -68,13 +68,13 @@ def page_model_comparison_body():
     st.markdown('Weve to specify n_neighbors should take on 1 through 30')
     st.markdown('You can set n_jobs = -1 to run computations in parallel (if supported by your computer and OS)')
 
-    st.image('src/nb6/model_training_accuracy_knn.png')
+    st.image('outputs/nb6/model_training_accuracy_knn.png')
 
     st.info('### Finalize Model')
 
-    st.image('src/nb6/final_model_accuracy.png')
+    st.image('outputs/nb6/final_model_accuracy.png')
 
-    st.image('src/nb6/final_model_classification.png')
+    st.image('outputs/nb6/final_model_classification.png')
 
     st.success('## Summary')
 

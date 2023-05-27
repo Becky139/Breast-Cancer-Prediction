@@ -51,13 +51,13 @@ def page_predictive_model_body():
 
     st.markdown('This process is demonstrated by first performing a standard train/test split, and then computing cross-validation error.')
 
-    st.image('src/nb4/classifier_accuracy.png')
+    st.image('outputs/nb4/classifier_accuracy.png')
     st.markdown('To get a better measure of prediction accuracy (which you can use as a proxy for “goodness of fit” of the model), you can successively split the data into folds that you will use for training and testing:')
 
     st.markdown('The above evaluations were based on using the entire set of features. You will now employ the correlation-based feature selection strategy to assess the effect of using 3 features which have the best correlation with the class labels.')
 
-    st.image('src/nb4/cross_validation_feature.png')
-    st.image('src/nb4/score_uncertainty.png')
+    st.image('outputs/nb4/cross_validation_feature.png')
+    st.image('outputs/nb4/score_uncertainty.png')
 
     st.markdown('From the above results, you can see that only a fraction of the features are required to build a model that performs similarly to models based on using the entire set of features.')
 
@@ -71,7 +71,7 @@ def page_predictive_model_body():
     st.markdown('> * False positive rate:       fpr = fp / (fp + tn)')
     st.markdown('> * True negative rate (or specificity): tnr = tn / (fp + tn)')
 
-    st.image('src/nb4/classification_report.jpeg')
+    st.image('outputs/nb4/classification_report.jpeg')
 
     st.success('#### Observation')
     st.markdown('There are two possible predicted classes: "1" and "0". Malignant = 1 (indicates prescence of cancer cells) and Benign')
@@ -115,7 +115,7 @@ def page_predictive_model_body():
     st.markdown(
         ' 7. **Prevalence**: How often does the yes condition actually occur in our sample?')
 
-    st.image('src/nb4/roc_curve.jpeg')
+    st.image('outputs/nb4/roc_curve.jpeg')
 
     st.markdown('* To interpret the ROC correctly, consider what the points that lie along the diagonal represent. For these situations, there is an equal chance of "+" and "-" happening. Therefore, this is not that different from making a prediction by tossing of an unbiased coin. Put simply, the classification model is random.')
 
@@ -129,8 +129,8 @@ def page_predictive_model_body():
 
     st.info('### Build a predictive model and evaluate with 5-cross validation using support vector classifies (ref NB4) for details')
 
-    st.image('src/nb5/accuracy_report.png')
-    st.image('src/nb5/classification_report.jpeg')
+    st.image('outputs/nb5/accuracy_report.png')
+    st.image('outputs/nb5/classification_report.jpeg')
 
     st.info('### Importance of Optimizing a Classifier')
 
@@ -145,14 +145,14 @@ def page_predictive_model_body():
     st.markdown('* Grid Search Parameter Tuning.')
     st.markdown('* Random Search Parameter Tuning.')
 
-    st.image('src/nb5/grid_svc_accuracy.png')
-    st.image('src/nb5/grid_svc_classification.jpeg')
+    st.image('outputs/nb5/grid_svc_accuracy.png')
+    st.image('outputs/nb5/grid_svc_classification.jpeg')
 
     st.info('### Decision Boundaries of Different Classifiers')
     st.markdown(
         'Lets see the decision boundaries produced by the linear, Gaussian and polynomial classifiers.')
 
-    st.image('src/nb5/svc_charts.jpeg')
+    st.image('outputs/nb5/svc_charts.jpeg')
 
     st.success('## Conclusion')
 

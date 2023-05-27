@@ -1,10 +1,26 @@
 # Load libraries for data processing
 import streamlit as st
+from src.data_management import load_data
 
 
 def page_data_anaylsis_body():
     st.markdown("# Data Analysis 📊")
     st.sidebar.markdown("# Data Analysis📊")
+
+    # load data
+    df = load_data()
+
+    st.write("### Cancer Dataset")
+
+    # inspect data
+    if st.checkbox("Inspect Cancer Dataset"):
+        st.write(
+            f"* The dataset has {df.shape[0]} rows and {df.shape[1]} columns, "
+            f"find below the first 10 rows.")
+
+        st.write(df.head(10))
+
+    st.write("---")
 
     st.title("Objectives of Data Exploration")
 
@@ -42,7 +58,7 @@ def page_data_anaylsis_body():
     st.info("### Unimodal Data Visualizations")
 
     # lets get the frequency of cancer diagnosis
-    st.image('src/nb2/diagnosis.jpeg')
+    st.image('outputs/nb2/diagnosis.jpeg')
 
     st.markdown("Check binary encoding from NB1 to confirm the coversion of the diagnosis categorical data into numeric, where")
     st.markdown("* Malignant = 1 (indicates prescence of cancer cells)")
@@ -75,17 +91,17 @@ def page_data_anaylsis_body():
     st.info("### Histogram the _mean suffix designition")
 
     # Plot histograms of _mean variables
-    st.image('src/nb2/hist_mean.jpeg')
+    st.image('outputs/nb2/hist_mean.jpeg')
 
     st.info("### Histogram for  the _se suffix designition")
 
     # Plot histograms of _se variables
-    st.image('src/nb2/hist_se.jpeg')
+    st.image('outputs/nb2/hist_se.jpeg')
 
     st.info("### Histogram _worst suffix designition")
 
     # Plot histograms of _worst variables
-    st.image('src/nb2/hist_worst.jpeg')
+    st.image('outputs/nb2/hist_worst.jpeg')
 
     st.success("Observation")
     st.markdown("We can see that perhaps the attributes  **concavity**,and **concavity_point ** may have an exponential distribution ( ). We can also see that perhaps the texture and smooth and symmetry attributes may have a Gaussian or nearly Gaussian distribution. This is interesting because many machine learning techniques assume a Gaussian univariate distribution on the input variables")
@@ -95,17 +111,17 @@ def page_data_anaylsis_body():
     st.info('### Density plots "_mean" suffix designition')
 
     # Density Plots
-    st.image('src/nb2/density_mean.jpeg')
+    st.image('outputs/nb2/density_mean.jpeg')
 
     st.info('### Density plots "_se" suffix designition')
 
     # Density Plots
-    st.image('src/nb2/density_se.jpeg')
+    st.image('outputs/nb2/density_se.jpeg')
 
     st.info('### Density plot "_worst" suffix designition')
 
     # Density Plots
-    st.image('src/nb2/density_worst.jpeg')
+    st.image('outputs/nb2/density_worst.jpeg')
 
     st.success("### Observation")
     st.markdown("We can see that perhaps the attributes perimeter,radius, area, concavity,ompactness may have an exponential distribution ( ). We can also see that perhaps the texture and smooth and symmetry attributes may have a Gaussian or nearly Gaussian distribution. This is interesting because many machine learning techniques assume a Gaussian univariate distribution on the input variables.")
@@ -115,17 +131,17 @@ def page_data_anaylsis_body():
     st.info('### Box plot "_mean" suffix designition')
 
     # box and whisker plots
-    st.image('src/nb2/boxplot_mean.jpeg')
+    st.image('outputs/nb2/boxplot_mean.jpeg')
 
     st.info('### Box plot "_se" suffix designition')
 
     # box and whisker plots
-    st.image('src/nb2/boxplot_se.jpeg')
+    st.image('outputs/nb2/boxplot_se.jpeg')
 
     st.info('### Box plot "_worst" suffix designition')
 
     # box and whisker plots
-    st.image('src/nb2/boxplot_worst.jpeg')
+    st.image('outputs/nb2/boxplot_worst.jpeg')
 
     st.success("### Observation")
     st.markdown("We can see that perhaps the attributes perimeter,radius, area, concavity,ompactness may have an exponential distribution ( ). We can also see that perhaps the texture and smooth and symmetry attributes may have a Gaussian or nearly Gaussian distribution. This is interesting because many machine learning techniques assume a Gaussian univariate distribution on the input variables.")
@@ -137,7 +153,7 @@ def page_data_anaylsis_body():
     st.info(" ### Correlation matrix")
 
     # plot correlation matrix
-    st.image('src/nb2/correlation.jpeg')
+    st.image('outputs/nb2/correlation.jpeg')
 
     st.success(" ### Observation:")
     st.markdown(
@@ -148,7 +164,7 @@ def page_data_anaylsis_body():
     st.markdown(" * Likewise, we see some strong negative correlation between fractal_dimension with radius, texture, parameter mean values.")
 
     st.info("### Scatter Plots")
-    st.image('src/nb2/scatter.jpeg')
+    st.image('outputs/nb2/scatter.jpeg')
 
     st.success(" ### Summary")
 
@@ -178,7 +194,7 @@ def page_data_anaylsis_body():
 
     st.markdown('Let’s evaluate the same algorithms with a standardized copy of the dataset. Here, I use sklearn to scale and transform the data such that each attribute has a mean value of zero and a standard deviation of one')
 
-    st.image('src/nb3/pca.jpeg')
+    st.image('outputs/nb3/pca.jpeg')
 
     st.success('Now, what we got after applying the linear PCA transformation is a lower dimensional subspace (from 3D to 2D in this case), where the samples are “most spread” along the new feature axes.')
 
@@ -186,7 +202,7 @@ def page_data_anaylsis_body():
 
     st.markdown('In order to decide how many principal components should be retained, it is common to summarise the results of a principal components analysis by making a scree plot. More about scree plot can be found [here](http://python-for-multivariate-analysis.readthedocs.io/a_little_book_of_python_for_multivariate_analysis.html), and [hear](https://www.analyticsvidhya.com/blog/2016/03/practical-guide-principal-component-analysis-python/)')
 
-    st.image('src/nb3/scree.jpeg')
+    st.image('outputs/nb3/scree.jpeg')
 
     st.success('#### Observation')
     st.markdown('The most obvious change in slope in the scree plot occurs at component 2, which is the “elbow” of the scree plot. Therefore, it cound be argued based on the basis of the scree plot that the first three components should be retained.')
