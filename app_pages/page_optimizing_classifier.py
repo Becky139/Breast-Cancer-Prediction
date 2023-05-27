@@ -14,7 +14,7 @@ def page_optimizing_classifier_body():
 
     st.markdown('#### Build a predictive model and evaluate with 5-cross validation using support vector classifies (ref NB4) for details')
 
-    st.image('outputs/nb5/svm_classification_report.png')
+    st.image('outputs/nb5/classification_report.jpeg')
 
     st.markdown('## Importance of optimizing a classifier')
 
@@ -28,12 +28,12 @@ def page_optimizing_classifier_body():
     st.markdown('* Grid Search Parameter Tuning.')
     st.markdown('* Random Search Parameter Tuning.')
 
-    st.image('outputs/nb5/grid_svc_classification.png')
+    st.image('outputs/nb5/grid_svc_classification.jpeg')
 
     st.markdown('### Decision boundaries of different classifiers')
     st.markdown('Lets see the decision boundaries produced by the linear, Gaussian and polynomial classifiers.')
 
-    st.image('outputs/nb5/svc_linear.png')
+    st.image('outputs/nb5/svc_charts.jpeg')
 
     st.markdown('## Conclusion')
 

@@ -1,19 +1,19 @@
 import streamlit as st
 
 # Class to generate multiple Streamlit pages using an object oriented approach
-
-
 class MultiPage:
+    """
+    Class for defining streamlit pages and
+    sidebar radion buttons to control which page to show 
+    """
 
     def __init__(self, app_name) -> None:
         self.pages = []
         self.app_name = app_name
 
         st.set_page_config(
-            page_title=self.app_name,)  # You may add an icon, to personalize your App
-        # check links below for additional icons reference
-        # https://docs.streamlit.io/en/stable/api.html#streamlit.set_page_config
-        # https://twemoji.maxcdn.com/2/test/preview.html
+            page_title=self.app_name,
+        )
 
     def add_page(self, title, func) -> None:
         self.pages.append({"title": title, "function": func})

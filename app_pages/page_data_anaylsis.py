@@ -1,6 +1,6 @@
 # Load libraries for data processing
 import streamlit as st
-from src.data_management import load_data
+from src.data_management import load_data, binary_data
 
 
 def page_data_anaylsis_body():
@@ -64,6 +64,18 @@ def page_data_anaylsis_body():
     st.markdown("* Malignant = 1 (indicates prescence of cancer cells)")
     st.markdown("* Benign = 0 (indicates abscence)")
 
+    df = binary_data()
+
+    st.write("### Cancer Dataset With Binary encoding")
+    # inspect data
+    if st.checkbox("Inspect Binary Dataset"):
+        st.write(
+            f"* The dataset has {df.shape[0]} rows and {df.shape[1]} columns, "
+            f"find below the last 10 rows.")
+
+        st.write(df.tail(10))
+
+    st.write("---")
     st.success("**Observation**")
     st.markdown("*357 observations indicating the absence of cancer cells and 212 show absence of cancer cell *")
 
