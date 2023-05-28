@@ -1,5 +1,26 @@
 ![project](project image)
 
+1.	Introdution
+2.  Dataset Content
+3.	Business Requirements
+    o	Epics
+    o	User Stories
+4.	Hypotheses and validation
+5.	Rationale to map the business requirements to the Data Visualizations and ML tasks
+6.	ML Business Case
+7.	Dashboard Design
+    o	Page 1: Quick project summary
+    o	Page 2: Data Anaylsis Page
+    o	Page 3: Project Hypothesis
+    o	Page 4: Predictive Model
+    o	Page 5: Optimizing SVM Classifier
+    o	Page 6: Model Comparison
+8.	Unfixed Bugs
+9.	Deployment
+10.	Main Data Analysis and Machine Learning Libraries
+11.	Credits
+
+
 ## Introduction
 
 Breast cancer (BC) is one of the most common cancers among women worldwide, representing the majority of new cancer cases and cancer-related deaths according to global statistics, making it a significant public health problem in today’s society.
@@ -42,25 +63,12 @@ Phyllodes tumors: These are fast-growing but typically painless tumors that star
 
 ![Breast Cancer](/assests/images/breast-cancer.webp)
 
-## Gitpod Reminders
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
 
 ## Dataset Content
 
 * The dataset is on kaggel it is publicly available so it does not require a license to use, the data set contain 569 rows and 32 columns. Each row represents and person and the columns have differant signs or textures of tumours.
 
 ![Data Sample](/assests/images/data-sample.PNG)
-
 
 ## Business Requirements
 
@@ -72,6 +80,15 @@ Business Requirement 2
 
 *	The client is interested in predicting whether a given tumour is malignant or benign based on the given features, with a high degree of accuracy.
 
+### Epics
+
+    •	Information gathering and data collection.
+    •	Data visualization, cleaning, and preparation.
+    •	Model training, optimization and validation.
+    •	Dashboard planning, designing, and development.
+    •	Dashboard deployment and release.
+
+### User Stoires
 
 
 ## Hypothesis and how to validate?
@@ -108,9 +125,10 @@ We have different types of classification algorithms we will be using :-
 We will use sklearn library to import all the methods of classification algorithms.
 We will use LogisticRegression method of model selection to use Logistic Regression Algorithm.
 
-The model success metrics are 95% or above on the test set.
+The model success metrics are 90% or above on the test set.
 
 ![Business Case](/assests/documents/business-case.docx)
+
 
 ## Dashboard Design
 
@@ -153,12 +171,24 @@ Page 4: Finalize Model/Conculsion
 5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
 6. If the slug size is too large then add large files not required for the app to the .slugignore file.
 
+## Gitpod Reminders
+
+To log into the Heroku toolbelt CLI:
+
+1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
+2. Scroll down to the *API Key* and click *Reveal*
+3. Copy the key
+4. In Gitpod, from the terminal, run `heroku_config`
+5. Paste in your API key when asked
+
+You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with *Regenerate API Key*.
+
+## Credits
+
 
 ## Main Data Analysis and Machine Learning Libraries
 * Here you should list the libraries you used in the project and provide an example(s) of how you used these libraries.
-
-
-## Credits 
+ 
 
 * In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
 * You can break the credits section up into Content and Media, depending on what you have included in your project. 
