@@ -184,25 +184,19 @@ Page 2: Data Visualization
 * Data Exploration
 * Categorical Data
 * Feature Scaling
-Explore the variables to assess how they relate to the response variable In this notebook, I am getting familiar with the data using data exploration and visualization techniques using python libraries (Pandas, matplotlib, seaborn. Familiarity with the data is important which will provide useful knowledge for data pre-processing)
 
 Page 3: Hypothesis
 * Project Hypothesis
-*Expected outcome
-Given breast cancer results from breast fine needle aspiration (FNA) test (is a quick and simple procedure to perform, which removes some fluid or cells from a breast lesion or cyst (a lump, sore or swelling) with a fine needle similar to a blood sample needle). Since this build a model that can classify a breast cancer tumor using two training classification:
-* 1= Malignant (Cancerous) - Present
-* 0= Benign (Not Cancerous) -Absent
+* Expected outcome
 
 Page 4: Predictive Model
 * Model Selection
 * Test Model
-Find the most predictive features of the data and filter it so it will enhance the predictive power of the analytics model. In this notebook I use feature selection to reduce high-dimension data, feature extraction and transformation for dimensionality reduction. This is essential in preparing the data before predictive models are developed.
 
 Page 5 Optimizing Classifier
 * Optimizing the SVM Classifier
 * Grid Search Parameter Tuning
 * Random Search Parameter Tuning
-I construct a predictive model using SVM machine learning algorithm to predict the diagnosis of a breast tumor. The diagnosis of a breast tumor is a binary variable (benign or malignant). I also evaluate the model using confusion matrix the receiver operating curves (ROC), which are essential in assessing and interpreting the fitted model.
 
 Page 6: Model Comparison/Conculsion
 * Evaluate Algorithms
@@ -210,9 +204,12 @@ Page 6: Model Comparison/Conculsion
 * Finalize Model
 * Conclusion
 
-
+## Fixed Bugs
+* heroku deployment
+* data loading with an index column 
+  
 ## Unfixed Bugs
-* You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
+* There were no known unfixed bugs in this project.
 
 ## Deployment
 ### Heroku
