@@ -1,25 +1,25 @@
 ![project](project image)
+The dashboard for [Breast Cancer model is hosted on Heroku](https://breast-cancer-prediction.herokuapp.com/)
 
 1.	Introdution
 2.  Dataset Content
 3.	Business Requirements
-    o	Epics
-    o	User Stories
+    *	Epics
+    *	User Stories
 4.	Hypotheses and validation
 5.	Rationale to map the business requirements to the Data Visualizations and ML tasks
 6.	ML Business Case
 7.	Dashboard Design
-    o	Page 1: Quick project summary
-    o	Page 2: Data Anaylsis Page
-    o	Page 3: Project Hypothesis
-    o	Page 4: Predictive Model
-    o	Page 5: Optimizing SVM Classifier
-    o	Page 6: Model Comparison
+    *	Page 1: Quick project summary
+    *	Page 2: Data Anaylsis Page
+    *	Page 3: Project Hypothesis
+    *	Page 4: Predictive Model
+    *	Page 5: Optimizing SVM Classifier
+    *	Page 6: Model Comparison
 8.	Unfixed Bugs
 9.	Deployment
 10.	Main Data Analysis and Machine Learning Libraries
 11.	Credits
-
 
 ## Introduction
 
@@ -187,6 +187,11 @@ Page 2: Data Visualization
 Explore the variables to assess how they relate to the response variable In this notebook, I am getting familiar with the data using data exploration and visualization techniques using python libraries (Pandas, matplotlib, seaborn. Familiarity with the data is important which will provide useful knowledge for data pre-processing)
 
 Page 4: Hypothesis
+* Project Hypothesis
+*Expected outcome
+Given breast cancer results from breast fine needle aspiration (FNA) test (is a quick and simple procedure to perform, which removes some fluid or cells from a breast lesion or cyst (a lump, sore or swelling) with a fine needle similar to a blood sample needle). Since this build a model that can classify a breast cancer tumor using two training classification:
+* 1= Malignant (Cancerous) - Present
+* 0= Benign (Not Cancerous) -Absent
 
 Page 3: Model Selection
 * Model Selection
@@ -196,7 +201,7 @@ Find the most predictive features of the data and filter it so it will enhance t
 Page 4: Finalize Model/Conculsion
 * Finalize Model
 * Conclusion
-
+I construct a predictive model using SVM machine learning algorithm to predict the diagnosis of a breast tumor. The diagnosis of a breast tumor is a binary variable (benign or malignant). I also evaluate the model using confusion matrix the receiver operating curves (ROC), which are essential in assessing and interpreting the fitted model.
 
 ## Unfixed Bugs
 * You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
