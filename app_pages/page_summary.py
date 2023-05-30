@@ -1,4 +1,5 @@
 import streamlit as st
+from src.data_management import raw_data
 
 
 def page_summary_body():
@@ -33,3 +34,18 @@ def page_summary_body():
 
         f"* 2 - The client is interested in predicting whether a given tumour is malignant or benign based on the given features, with a high degree of accuracy.\n"
     )
+
+    # load data
+    df = raw_data()
+
+    st.write("### Cancer Dataset")
+
+    # inspect data
+    if st.checkbox("Inspect Cancer Dataset"):
+        st.write(
+            f"* The dataset has {df.shape[0]} rows and {df.shape[1]} columns, "
+            f"find below the first 10 rows.")
+
+        st.write(df.head(10))
+
+    st.write("---")
