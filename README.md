@@ -63,7 +63,6 @@ Phyllodes tumors: These are fast-growing but typically painless tumors that star
 
 ![Breast Cancer](/assests/images/breast-cancer.webp)
 
-
 ## Dataset Content
 
 * The dataset is on kaggel it is publicly available so it does not require a license to use, the data set contain 569 rows and 32 columns. Each row represents and person and the columns have differant signs or textures of tumours.
@@ -116,6 +115,22 @@ Business Requirement 2
     •	Dashboard deployment and release.
 
 ### User Stoires
+
+    •	US1: As a client, I want to know which attributes will help to differentiate weather a tumor is benign or malignant on the the right set of features.
+    
+    •	US2: As a client, I want to have reliable prediction weather a tumor is bengin or maglignant helping to get the person the correct treament as quickly as possiable.
+
+    •	US3: As a technical user, I want to learn about the ML steps that were used to arrive at the best prediction so that I can understand the model employed.
+    
+    •	US4: As a technical user, I want to know the model performance so that I can ensure that the predictions are reliable. 
+    
+    •	US5: As a client, I want to get a dashboard so that I can display the results of the prediction on a standalone app.
+    
+    •	US6: As a user, I want to have access to the data cleaning and preparation pipeline so that I can quickly detemine if the tumor is maglingant or begnian without reinventing the wheel.
+    
+    •	US7: As a user, I want to know the source and content of the data used in training the model so that I can be confident about the quality of the trained model.
+    
+    •	US8: As a user, I want to know the project hypotheses and how they were validated so that I get a deeper understand of the mechanisms that determine if a tumor is maglignant or begnian.
 
 
 ## Hypothesis and how to validate?
