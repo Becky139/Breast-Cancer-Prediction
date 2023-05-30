@@ -70,6 +70,33 @@ Phyllodes tumors: These are fast-growing but typically painless tumors that star
 
 ![Data Sample](/assests/images/data-sample.PNG)
 
+Data Types
+Structured data is data which is a form of data which has a high degree or organization such as numerical or categorical data. Temperature, phone numbers, gender are examples of structured data.
+
+Unstructured data is data in a form which doesn’t explicitly have structure we are used to. Examples of unstructured data are photos, images, audio, language text and many others. There is an emerging field called Deep Learning which is using a specialized set of algorithms which perform well with unstructured data.
+
+![Data Types](/assests/images/data_types.png)
+
+ The two common types of structured we commonly deal with are categorical variables (which have a finite set of values) or numerical values (which are continuous).
+
+Categorical Variables: Categorical variables can also be nominal or ordinal.
+
+    •	Nominal data has no intrinsic ordering to the categories. For example gender (Male, Female, Other) has no specific ordering.
+    •	Ordinal data as clear ordering such as three settings on a toaster (high medium and low). A frequency table (count of each category) is the common statistic for describing categorical data of each variable, and a bar chart or a waffle chart (shown below) are two visualizations which can be used.
+
+Numeric Variables: Numeric or continuous variables can be any value within a finite or infinite interval (temperature, height, weight.
+    There are two types of numeric variables are interval and ratios.
+    •	Interval variables have numeric scales and the same interpretation throughout the scale, but do not have an absolute zero. eg temperature in Fahrenheit or Celcius can meaningfully be subtracted or added (difference between 10 degrees and 20 degrees is the same difference as 40 to 50 degrees) but cannot be multiplied. For example, a day which is twice as hot may not be twice the temperature
+    •	ratio scale of measurement is the most informative scale. It is an interval scale with the additional property that its zero position indicates the absence of the quantity being measured.
+
+Transforming Data: There are a couple of techniques:
+    •	Binning (Numerical to Categorical) -Binning
+    •	Encoding (Categorical to Numerical); Continuization
+    o	Encoding or continuation is the transformation of categorical variables to binary or numerical counterparts. An example is to treat male or female for gender as 1 or 0. Categorical variables must be encoded in many modeling methods (e.g., linear regression, SVM, neural networks)
+    o	Two main types of encoding are Binary and Target-based (<http://www.saedsayad.com/encoding.htm>)
+    o	Binary encoding is a special case of encoding where the value is set to a 0 or 1 to indicate absence or presence of a category.
+    o	One hot encoding is a special case where multiple categories are each binary encoded. Given we have k categories, this will create k extra features (thus increasing the dimensionality of the data)
+
 ## Business Requirements
 
 Business Requirement 1
@@ -142,12 +169,14 @@ Page 2: Data Visualization
 * Data Exploration
 * Categorical Data
 * Feature Scaling
+Explore the variables to assess how they relate to the response variable In this notebook, I am getting familiar with the data using data exploration and visualization techniques using python libraries (Pandas, matplotlib, seaborn. Familiarity with the data is important which will provide useful knowledge for data pre-processing)
 
 Page 4: Hypothesis
 
 Page 3: Model Selection
 * Model Selection
 * Test Model
+Find the most predictive features of the data and filter it so it will enhance the predictive power of the analytics model. In this notebook I use feature selection to reduce high-dimension data, feature extraction and transformation for dimensionality reduction. This is essential in preparing the data before predictive models are developed.
 
 Page 4: Finalize Model/Conculsion
 * Finalize Model
