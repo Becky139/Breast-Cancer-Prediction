@@ -169,9 +169,9 @@ We will use LogisticRegression method of model selection to use Logistic Regress
 
 The model success metrics are 90% or above on the test set.
 
-![Business Case](/assests/documents/business-case.docx)
+To achieve this we will follow the CRISP DM process shown in the diagram below
 
-
+![CRISP-DM Process](/assests/images/CRISP-DM_Process.jpg)
 ## Dashboard Design
 
 Page 1: Quick project summary
