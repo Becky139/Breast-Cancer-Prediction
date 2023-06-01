@@ -239,27 +239,32 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 
 ## Credits
 
+### Main Languages Used
+
+- [Jupyter Notebooks](https://en.wikipedia.org/wiki/Project_Jupyter#Jupyter_Notebook "Link to Jupyter Notebooks Wiki")
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language) "Link to Python Wiki")
+
 
 ## Main Data Analysis and Machine Learning Libraries
-* Here you should list the libraries you used in the project and provide an example(s) of how you used these libraries.
- 
 
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
+* NumPy - Processing of images via conversion to NumPy arrays. Many other libraries used in this project are also dependent on NumPy
+* Pandas - Conversion of numerical data into DataFrames to facilitate functional operations
+* Matplotlib - Reading, processing, and displaying image data, producing graphs of tabular data
+* Seaborn - Data visualisation and presentation, such as the confusion matrix heatmap and image dimensions scatter plot.
+* Plotly - Graphical visualisation of data, used in particular on dashboard for interactive charts
+* Scikit-learn - Calculating class weights to handle target imbalance and generating classification report
+* Scikit-image - Application of Sobel filters to image averages to detect edges and dominant features
 
-### Content 
+## Other technologies used
 
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
+Streamlit - Development of dashboard for presentation of data and project delivery
+Heroku - Deployment of dashboard as web application
+Git/GitHub - Version control and storage of source code
+CodeAnywhere - IDE Workspace in which application was developed
 
-### Media
+## Acknowledgements
 
-- The photos used on the home and sign-up page are from This Open-Source site
-- The images used for the gallery page were taken from this other open-source site
-
-
-
-## Acknowledgements (optional)
-* Thank the people that provided support through this project.
+- I would like to thank my family for their valued opinions and critic during the process of design and development.
+- I would like to thank my tutor Seun, for their invaluable help and guidance throughout the process.
+- Lastly, I would like to extend my deepest gratitude to the amazing people in Slack who helped me rigorously test every aspect of my site.
 
