@@ -1,4 +1,5 @@
-![project](project image)
+![project](assests/images/responsive.png)
+
 The dashboard for [Breast Cancer model is hosted on Heroku](https://breast-cancer-prediction.herokuapp.com/)
 
 1.	Introdution
@@ -132,13 +133,11 @@ Business Requirement 2
     
     •	US8: As a user, I want to know the project hypotheses and how they were validated so that I get a deeper understand of the mechanisms that determine if a tumor is maglignant or begnian.
 
-
 ## Hypothesis and how to validate?
 
 * We beliveve that by looking at differant features we can differentiate between benign or malignant tumours.
 
 * This analysis aims to observe which features are most helpful in predicting malignant or benign cancer and to see general trends that may aid us in model selection and hyper  parameter selection. The goal is to classify whether the breast cancer is benign or malignant. To achieve this i have used machine learning classification methods to fit a function that can predict the discrete class of new input.
-
 
 ## The rationale to map the business requirements to the Data Visualizations and ML tasks
 
@@ -172,6 +171,7 @@ The model success metrics are 90% or above on the test set.
 To achieve this we will follow the CRISP DM process shown in the diagram below
 
 ![CRISP-DM Process](/assests/images/CRISP-DM_Process.jpg)
+
 ## Dashboard Design
 
 Page 1: Quick project summary
@@ -184,6 +184,7 @@ Page 2: Data Visualization
 * Data Exploration
 * Categorical Data
 * Feature Scaling
+Explore the variables to assess how they relate to the response variable In this notebook, we'll get familiar with the data using data exploration and visualization techniques using python libraries (Pandas, matplotlib, seaborn. Familiarity with the data is important which will provide useful knowledge for data pre-processing). Find the most predictive features of the data and filter it so it will enhance the predictive power of the analytics model. We'll use feature selection to reduce high-dimension data, feature extraction and transformation for dimensionality reduction. This is essential in preparing the data before predictive models are developed.
 
 Page 3: Hypothesis
 * Project Hypothesis
@@ -192,17 +193,23 @@ Page 3: Hypothesis
 Page 4: Predictive Model
 * Model Selection
 * Test Model
+Construct predictive models to predict the diagnosis of a breast tumor. We'll construct a predictive model using SVM machine learning algorithm to predict the diagnosis of a breast tumor. The diagnosis of a breast tumor is a binary variable (benign or malignant). we'll also evaluate the model using confusion matrix the receiver operating curves (ROC), which are essential in assessing and interpreting the fitted model.
 
 Page 5 Optimizing Classifier
 * Optimizing the SVM Classifier
 * Grid Search Parameter Tuning
 * Random Search Parameter Tuning
+Construct predictive models to predict the diagnosis of a breast tumor. We'll aim to tune parameters of the SVM Classification model using scikit-learn.
 
 Page 6: Model Comparison/Conculsion
 * Evaluate Algorithms
 * Tuning Hyper-Parameters
 * Finalize Model
 * Conclusion
+There are standard workflows in a machine learning project that can be automated. In Python scikit-learn, Pipelines help to clearly define and automate these workflows.
+* Pipelines help overcome common problems like data leakage in your test harness. 
+* Python scikit-learn provides a Pipeline utility to help automate machine learning workflows.
+* Pipelines work by allowing for a linear sequence of data transforms to be chained together culminating in a modeling process that can be evaluated.
 
 ## Fixed Bugs
 * heroku deployment
