@@ -86,3 +86,7 @@ def page_model_comparison_body():
     st.markdown('     * Evaluate Algorithms with Standardization (KNN and SVM looked good).')
     st.markdown('4. Algorithm Tuning (K=19 for KNN was good, SVM with an RBF kernel and C=100 was best)..')
     st.markdown('5. Finalize Model (use all training data and confirm using validation dataset)')
+    
+    st.title ('Conclusion')
+    
+    st.markdown('The purpose of this study wasy to create a model that can predict if a tumor is benign or malignant based on the given features. The SVC provided the best accuracy score with the given hyper-paramters. We also observed that scaling the data improved the performance of the algorithm for the sample dataset. As a next step, outliers can be removed to check if improves the performance or not.')
