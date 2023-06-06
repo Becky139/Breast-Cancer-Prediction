@@ -18,9 +18,10 @@ The dashboard for [Breast Cancer model is hosted on Heroku](https://breast-cance
     *	Page 5: Optimizing SVM Classifier
     *	Page 6: Model Comparison
 8.	Unfixed Bugs
-9.	Deployment
-10.	Main Data Analysis and Machine Learning Libraries
-11.	Credits
+9. Testing
+10.	Deployment
+11.	Main Data Analysis and Machine Learning Libraries
+12.	Credits
 
 ## Introduction
 
@@ -102,18 +103,22 @@ Transforming Data: There are a couple of techniques:
 Business Requirement 1
 
 *	The client is interested conducting a study to differentiate weather a tumor is benign or malignant.
+*   As a client, I can navigate easily around an interactive dashboard so that I can view and understand the data presented and I can view and toggle visual graphs, charts of the data.
 
 Business Requirement 2
 
+*   As a client, I can access and see the proccess used in developing the machince learning model with access given to the finalized model.
 *	The client is interested in predicting whether a given tumour is malignant or benign based on the given features, with a high degree of accuracy.
+
+In order to address the business requirements, we have the following epics and user stories. Each user story was then broken down to manageable stasks, and the agile process was used to implement each task.
 
 ### Epics
 
-    •	Information gathering and data collection.
-    •	Data visualization, cleaning, and preparation.
-    •	Model training, optimization and validation.
-    •	Dashboard planning, designing, and development.
-    •	Dashboard deployment and release.
+*   Information gathering and data collection.
+*   Data visualization, cleaning, and preparation.
+*   Model training, optimization and validation.
+*   Dashboard planning, designing, and development.
+*   Dashboard deployment and release.
 
 ### User Stoires
 
@@ -138,6 +143,10 @@ Business Requirement 2
 * We believe that by looking at different features we can with a good degree of accuracy differentiate between benign or malignant tumours. For this model, we would need the accuracy to be above 90% as stated in the business requirements.
 
 * This analysis aims to observe which features are most helpful in predicting malignant or benign cancer and to see general trends that may aid us in model selection and hyperparameter selection. The goal is to classify whether the breast cancer is benign or malignant. To achieve this, I have used machine learning classification methods to fit a function that can predict the discrete class of new input.
+
+* This hypothesis will be validated through the testing and graphical evaluation of the generated model, specifically logging its validation accuracy and loss between epochs, as well as creating a confusion matrix between the two outcomes.
+
+* If these two hypotheses are validated, the client can use the insights offered by conventional data analysis to aid in getting a diagonisis quickly and with a high degree of accuracy.
 
 ## The rationale to map the business requirements to the Data Visualizations and ML tasks
 
@@ -217,6 +226,18 @@ There are standard workflows in a machine learning project that can be automated
   
 ## Unfixed Bugs
 * There were no known unfixed bugs in this project.
+
+## Testing
+
+### Validation
+
+All of the Python code in this project was validated as conforming to PEP8 standards via installation of the pycodestyle package in the workspace terminal via pip install pycodestyle
+
+For the cells of the Jupyter notebooks, an additional step was required of temporarily adding two code cells atop each notebook containing the following code: %load_ext pycodestyle_magic and %pycodestyle_on .
+
+I subsequently reran the cells and edited them according to the errors that were documented there.
+
+For the Streamlit app pages and source code files, I simply edited the code until no errors were recorded in the Problems section of the GitPod workspace.
 
 ## Deployment
 ### Heroku
