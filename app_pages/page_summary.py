@@ -34,13 +34,25 @@ def page_summary_body():
     # documentation
     st.write(
         f"* For additional information, please visit and **readme** the "
-        f"[Project README file](https://github.com/Becky139/Breast-Cancer-Prediction/README.md).")
+        f"[Project README file](https://github.com/Becky139/Breast-Cancer-Prediction/README.md)."
+    )
 
     # copied from README file - "Business Requirements" section
     st.success(
         f"The project has 2 business requirements:\n"
         f"* 1 - The client is interested conducting a study to differentiate weather a tumor is benign or malignant.\n"
-        f"* 2 - The client is interested in predicting whether a given tumour is malignant or benign based on the given features, with a high degree of accuracy.\n")
+        f"* As a client, I can navigate easily around an interactive dashboard so that I can view and understand the data presented and I can view and toggle visual graphs, charts of the data."
+        f"* 2 - As a client, I can access and see the proccess used in developing the machince learning model with access given to the finalized model."
+        f"* The client is interested in predicting whether a given tumour is malignant or benign based on the given features, with a high degree of accuracy.\n"
+    )
+
+    st.info("# Dataset Content")
+
+    st.markdown(
+        "* The dataset is on kaggel it is publicly available so it does not require a license to use, the data set contain 569 rows and 32 columns. Each row represents and person and the columns have differant signs or textures of tumours. The dataset contains ** 569 samples of malignant and benign tumor cells**."
+        "* The first two columns in the dataset store the unique ID numbers of the samples and the corresponding diagnosis(M=malignant, B=benign), respectively."
+        "* The columns 3-32 contain 30 real-value features that have been computed from digitized images of the cell nuclei, which can be used to build a model to predict whether a tumor is benign or malignant. "
+    )
 
     # load data
     df = raw_data()
