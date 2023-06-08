@@ -49,15 +49,15 @@ def page_summary_body():
     st.info("# Dataset Content")
 
     st.markdown(
-        "* The dataset is on kaggel it is publicly available so it does not require a license to use, the data set contain 569 rows and 32 columns. Each row represents and person and the columns have differant signs or textures of tumours. The dataset contains ** 569 samples of malignant and benign tumor cells**."
-        "* The first two columns in the dataset store the unique ID numbers of the samples and the corresponding diagnosis(M=malignant, B=benign), respectively."
-        "* The columns 3-32 contain 30 real-value features that have been computed from digitized images of the cell nuclei, which can be used to build a model to predict whether a tumor is benign or malignant. "
+        "* The dataset is on kaggel it is publicly available so it does not require a license to use, the data set contain 569 rows and 32 columns. Each row represents and person and the columns have differant signs or textures of tumours. The dataset contains ** 569 samples of malignant and benign tumor cells**.\n"
+        "* The first two columns in the dataset store the unique ID numbers of the samples and the corresponding diagnosis(M=malignant, B=benign), respectively.\n"
+        "* The columns 3-32 contain 30 real-value features that have been computed from digitized images of the cell nuclei, which can be used to build a model to predict whether a tumor is benign or malignant.\n"
     )
 
     # load data
     df = raw_data()
 
-    st.write("### Raw Cancer Dataset")
+    st.write("### Raw Cancer Dataset from Kaggle")
 
     # inspect data
     if st.checkbox("Inspect Cancer Dataset"):
