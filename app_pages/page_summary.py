@@ -41,8 +41,8 @@ def page_summary_body():
     st.success(
         f"The project has 2 business requirements:\n"
         f"* 1 - The client is interested conducting a study to differentiate weather a tumor is benign or malignant.\n"
-        f"* As a client, I can navigate easily around an interactive dashboard so that I can view and understand the data presented and I can view and toggle visual graphs, charts of the data."
-        f"* 2 - As a client, I can access and see the proccess used in developing the machince learning model with access given to the finalized model."
+        f"* As a client, I can navigate easily around an interactive dashboard so that I can view and understand the data presented and I can view and toggle visual graphs, charts of the data.\n\n"
+        f"* 2 - As a client, I can access and see the proccess used in developing the machince learning model with access given to the finalized model.\n"
         f"* The client is interested in predicting whether a given tumour is malignant or benign based on the given features, with a high degree of accuracy.\n"
     )
 
@@ -57,7 +57,7 @@ def page_summary_body():
     # load data
     df = raw_data()
 
-    st.write("### Cancer Dataset")
+    st.write("### Raw Cancer Dataset")
 
     # inspect data
     if st.checkbox("Inspect Cancer Dataset"):

@@ -152,17 +152,13 @@ We will use LogisticRegression method of model selection to use Logistic Regress
 
 The model success metrics are 90% or above on the test set.
 
-To achieve this we will follow the CRISP DM process shown in the diagram below
-
-![CRISP-DM Process](/assests/images/CRISP-DM_Process.jpg)
-
 ## Dashboard Design
 
 Page 1: Quick project summary
 * Quick project summary
-* Project Terms & Jargon
 * Describe Project Dataset
 * State Business Requirements
+A introdution to the project with the goals in the form of bussiness requirements, a decribsion on the dataset explaining were i got the data and also be able to view the data. The business requirements will be stated so we know what we are lookng to create.
 
 Page 2: Data Visualization
 * Data Exploration
@@ -173,6 +169,7 @@ Explore the variables to assess how they relate to the response variable In this
 Page 3: Hypothesis
 * Project Hypothesis
 * Expected outcome
+Show the project hypothesis and explain how we can validate this.
 
 Page 4: Predictive Model
 * Model Selection
@@ -190,21 +187,14 @@ Page 6: Model Comparison/Conculsion
 * Tuning Hyper-Parameters
 * Finalize Model
 * Conclusion
-There are standard workflows in a machine learning project that can be automated. In Python scikit-learn, Pipelines help to clearly define and automate these workflows.
-* Pipelines help overcome common problems like data leakage in your test harness. 
-* Python scikit-learn provides a Pipeline utility to help automate machine learning workflows.
-* Pipelines work by allowing for a linear sequence of data transforms to be chained together culminating in a modeling process that can be evaluated.
-
-## Fixed Bugs
-* heroku deployment
-* data loading with an index column 
+There are standard workflows in a machine learning project that can be automated. In Python scikit-learn, Pipelines help to clearly define and automate these workflows.Pipelines help overcome common problems like data leakage in your test harness. Python scikit-learn provides a Pipeline utility to help automate machine learning workflows.Pipelines work by allowing for a linear sequence of data transforms to be chained together culminating in a modeling process that can be evaluated.
   
 ## Unfixed Bugs
 * There were no known unfixed bugs in this project.
 
 ## Testing
 
-### Validation
+### Code Validation
 
 All of the Python code in this project was validated as conforming to PEP8 standards via installation of the pycodestyle package in the workspace terminal via pip install pycodestyle
 
@@ -257,6 +247,8 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 * Plotly - Graphical visualisation of data, used in particular on dashboard for interactive charts
 * Scikit-learn - Calculating class weights to handle target imbalance and generating classification report
 * Scikit-image - Application of Sobel filters to image averages to detect edges and dominant features
+* Scipy - It provides more utility functions for optimization, stats and signal processing
+
 
 ## Other technologies used
 
@@ -268,6 +260,6 @@ CodeAnywhere - IDE Workspace in which application was developed
 ## Acknowledgements
 
 - I would like to thank my family for their valued opinions and critic during the process of design and development.
-- I would like to thank my tutor Seun, for their invaluable help and guidance throughout the process.
+- I would like to thank my tutor Mo, for their invaluable help and guidance throughout the process.
 - Lastly, I would like to extend my deepest gratitude to the amazing people in Slack who helped me rigorously test every aspect of my site.
 

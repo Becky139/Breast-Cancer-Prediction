@@ -130,5 +130,5 @@ def page_model_comparison_body():
     st.title("Conclusion")
 
     st.markdown(
-        "The purpose of this study wasy to create a model that can predict if a tumor is benign or malignant based on the given features. The SVC provided the best accuracy score with the given hyper-paramters. We also observed that scaling the data improved the performance of the algorithm for the sample dataset. This Model validates are hypothisis made in the bussiness case and also is above the accuracy the client wanted with 94% being higher than 90%."
+        "The purpose of this study was to create a model that can predict if a tumor is benign or malignant based on the given features. The SVC provided the best accuracy score with the given hyper-parameters. We also observed that scaling the data improved the performance of the algorithm for the sample dataset. This Model validates our hypothesis made in the business case and also is above the accuracy the client wanted with 94% being higher than 90%. We have met the business requirements with the dashboard navigation and by showing and explaining the model process with access given to the client for the finalized model."
     )
