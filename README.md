@@ -227,15 +227,28 @@ For the Streamlit app pages and source code files, I simply edited the code unti
 
 ![Heroku GitHub](assets/images/heroku-github.png)
 
-5. Select the branch you want to deploy, then click Deploy Branch.
+5. If the slug size is too large then add large files not required for the app to the .slugignore file.
+
+6. To Convert the stack from stack-22 to stack-20 so we can deploy the app Login to heroku in command line
+
+![Heroku Command Login](assets/images/heroku-command-login.png)
+
+7. Copy API key from heroku enter email as username and then use API key as password
+
+![Heroku API Key](assets/images/api-key.png)
+![Heroku Command Logged-in](assets/images/heroku-command-logged-in.png)
+
+8. Enter the following command to convert the stack so its compatiable with current version
+
+![Heroku Set Stack](assets/images/heroku-set-stack.png)
+
+9. Select the branch you want to deploy, then click Deploy Branch.
 
 ![Heroku Deploy](assets/images/heroku-deploy.png)
 
-6. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
+10. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
 
 ![Heroku Build Log](assets/images/heroku-build-log.png)
-
-7. If the slug size is too large then add large files not required for the app to the .slugignore file.
 
 ## Gitpod Reminders
 
