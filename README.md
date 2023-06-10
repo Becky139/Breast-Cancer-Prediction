@@ -2,26 +2,26 @@
 
 The dashboard for [Breast Cancer model is hosted on Heroku](https://breast-cancer-prediction.herokuapp.com/)
 
-1.	Introdution
-2.  Dataset Content
-3.	Business Requirements
-    *	Epics
-    *	User Stories
-4.	Hypotheses and validation
-5.	Rationale to map the business requirements to the Data Visualizations and ML tasks
-6.	ML Business Case
-7.	Dashboard Design
-    *	Page 1: Quick project summary
-    *	Page 2: Data Anaylsis Page
-    *	Page 3: Project Hypothesis
-    *	Page 4: Predictive Model
-    *	Page 5: Optimizing SVM Classifier
-    *	Page 6: Model Comparison
-8.	Unfixed Bugs
-9. Testing
-10.	Deployment
-11.	Main Data Analysis and Machine Learning Libraries
-12.	Credits
+1.	[Introduction](#Introduction)
+2.  [Dataset Content](#dataset-content)
+3.	[Business Requirements](#business-requirements)
+    *	[Epics](#epics)
+    *	[User Stories](#user-stoires)
+4.	[Hypotheses and validation](#hypothesis-and-how-to-validate)
+5.	[Rationale to map the business requirements to the Data Visualizations and ML tasks](#the-rationale-to-map-the-business-requirements-to-the-data-visualizations-and-ml-tasks)
+6.	[ML Business Case](#ml-business-case)
+7.	[Dashboard Design](#dashboard-design)
+    *	[Page 1: Quick project summary](#page-1-quick-project-summary)
+    *	[Page 2: Data Anaylsis Page](#page-2-data-visualization)
+    *	[Page 3: Project Hypothesis](#page-3-hypothesis)
+    *	[Page 4: Predictive Model](#page-4-predictive-model)
+    *	[Page 5: Optimizing SVM Classifier](#page-5-optimizing-classifier)
+    *	[Page 6: Model Comparison](#page-6-model-comparisonconculsion)
+8.  [Unfixed Bugs](#unfixed-bugs)
+9.  [Testing](#testing)
+10.	[Deployment](#deployment)
+11.	[Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
+12.	[Credits](#credits)
 
 ## Introduction
 
@@ -154,35 +154,35 @@ The model success metrics are 90% or above on the test set.
 
 ## Dashboard Design
 
-Page 1: Quick project summary
+### Page 1: Quick project summary
 * Quick project summary
 * Describe Project Dataset
 * State Business Requirements
 A introdution to the project with the goals in the form of bussiness requirements, a decribsion on the dataset explaining were i got the data and also be able to view the data. The business requirements will be stated so we know what we are lookng to create.
 
-Page 2: Data Visualization
+### Page 2: Data Visualization
 * Data Exploration
 * Categorical Data
 * Feature Scaling
 Explore the variables to assess how they relate to the response variable In this notebook, we'll get familiar with the data using data exploration and visualization techniques using python libraries (Pandas, matplotlib, seaborn. Familiarity with the data is important which will provide useful knowledge for data pre-processing). Find the most predictive features of the data and filter it so it will enhance the predictive power of the analytics model. We'll use feature selection to reduce high-dimension data, feature extraction and transformation for dimensionality reduction. This is essential in preparing the data before predictive models are developed.
 
-Page 3: Hypothesis
+### Page 3: Hypothesis
 * Project Hypothesis
 * Expected outcome
 Show the project hypothesis and explain how we can validate this.
 
-Page 4: Predictive Model
+### Page 4: Predictive Model
 * Model Selection
 * Test Model
 Construct predictive models to predict the diagnosis of a breast tumor. We'll construct a predictive model using SVM machine learning algorithm to predict the diagnosis of a breast tumor. The diagnosis of a breast tumor is a binary variable (benign or malignant). we'll also evaluate the model using confusion matrix the receiver operating curves (ROC), which are essential in assessing and interpreting the fitted model.
 
-Page 5 Optimizing Classifier
+### Page 5 Optimizing Classifier
 * Optimizing the SVM Classifier
 * Grid Search Parameter Tuning
 * Random Search Parameter Tuning
 Construct predictive models to predict the diagnosis of a breast tumor. We'll aim to tune parameters of the SVM Classification model using scikit-learn.
 
-Page 6: Model Comparison/Conculsion
+### Page 6: Model Comparison/Conculsion
 * Evaluate Algorithms
 * Tuning Hyper-Parameters
 * Finalize Model
@@ -212,11 +212,30 @@ For the Streamlit app pages and source code files, I simply edited the code unti
 * The project was deployed to Heroku using the following steps.
 
 1. Log in to Heroku and create an App
-2. At the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
-6. If the slug size is too large then add large files not required for the app to the .slugignore file.
+
+![Heroku Create App](assets/images/heroku-create-app.png)
+
+2. Create a Name for the Applipcation
+
+![Heroku Name App](assets/images/heroku-name-app.png)
+
+3. At the Deploy tab, select GitHub as the deployment method.
+
+![Heroku Deploy Tab](assets/images/heroku-deplot-tab.png)
+
+4. Select your repository name and click Search. Once it is found, click Connect.
+
+![Heroku GitHub](assets/images/heroku-github.png)
+
+5. Select the branch you want to deploy, then click Deploy Branch.
+
+![Heroku Deploy](assets/images/heroku-deploy.png)
+
+6. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
+
+![Heroku Build Log](assets/images/heroku-build-log.png)
+
+7. If the slug size is too large then add large files not required for the app to the .slugignore file.
 
 ## Gitpod Reminders
 
@@ -230,14 +249,6 @@ To log into the Heroku toolbelt CLI:
 
 You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with *Regenerate API Key*.
 
-## Credits
-
-### Main Languages Used
-
-- [Jupyter Notebooks](https://en.wikipedia.org/wiki/Project_Jupyter#Jupyter_Notebook "Link to Jupyter Notebooks Wiki")
-- [Python](https://en.wikipedia.org/wiki/Python_(programming_language) "Link to Python Wiki")
-
-
 ## Main Data Analysis and Machine Learning Libraries
 
 * NumPy - Processing of images via conversion to NumPy arrays. Many other libraries used in this project are also dependent on NumPy
@@ -250,12 +261,29 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 * Scipy - It provides more utility functions for optimization, stats and signal processing
 
 
-## Other technologies used
+### Other technologies used
 
 Streamlit - Development of dashboard for presentation of data and project delivery
 Heroku - Deployment of dashboard as web application
 Git/GitHub - Version control and storage of source code
 CodeAnywhere - IDE Workspace in which application was developed
+
+### Main Languages Used
+
+- [Jupyter Notebooks](https://en.wikipedia.org/wiki/Project_Jupyter#Jupyter_Notebook "Link to Jupyter Notebooks Wiki")
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language) "Link to Python Wiki")
+
+## Credits
+
+### Code
+I have reused and adapted code from different sections of the course as well as the walk through projects.
+
+Specific locations of the sources of the code are referred to in inline comments and doc strings in each notebook or python file.
+
+### Content
+The outline of this documentation was taken from the accompanying (to the project) code repository provided by the Code Institute.
+
+The icon in the dashboard app was taken from this page
 
 ## Acknowledgements
 
