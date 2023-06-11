@@ -1,4 +1,4 @@
-![project](assests/images/responsive.png)
+![project](assets/images/responsive.png)
 
 The dashboard for [Breast Cancer model is hosted on Heroku](https://breast-cancer-prediction.herokuapp.com/)
 
@@ -44,34 +44,38 @@ Since the labels in the data are discrete, the predication falls into two catego
 * The first two columns in the dataset store the unique ID numbers of the samples and the corresponding diagnosis (M=malignant, B=benign), respectively. 
 * The columns 3-32 contain 30 real-value features that have been computed from digitized images of the cell nuclei, which can be used to build a model to predict whether a tumor is benign or malignant. 
 
-![Data Sample](/assests/images/data-sample.PNG)
+![Data Sample](/assets/images/data-sample.PNG)
 
 Data Types
 Structured data is data which is a form of data which has a high degree or organization such as numerical or categorical data. Temperature, phone numbers, gender are examples of structured data.
 
 Unstructured data is data in a form which doesn’t explicitly have structure we are used to. Examples of unstructured data are photos, images, audio, language text and many others. There is an emerging field called Deep Learning which is using a specialized set of algorithms which perform well with unstructured data.
 
-![Data Types](/assests/images/data_types.png)
+![Data Types](/assets/images/data_types.png)
 
- The two common types of structured we commonly deal with are categorical variables (which have a finite set of values) or numerical values (which are continuous).
+The two common types of structured we commonly deal with are categorical variables (which have a finite set of values) or numerical values (which are continuous).
 
 Categorical Variables: Categorical variables can also be nominal or ordinal.
 
-    •	Nominal data has no intrinsic ordering to the categories. For example gender (Male, Female, Other) has no specific ordering.
-    •	Ordinal data as clear ordering such as three settings on a toaster (high medium and low). A frequency table (count of each category) is the common statistic for describing categorical data of each variable, and a bar chart or a waffle chart (shown below) are two visualizations which can be used.
+* Nominal data has no intrinsic ordering to the categories. For example gender (Male, Female, Other) has no specific ordering.
+
+* Ordinal data as clear ordering such as three settings on a toaster (high medium and low). A frequency table (count of each category) is the common statistic for describing categorical data of each variable, and a bar chart or a waffle chart (shown below) are two visualizations which can be used.
 
 Numeric Variables: Numeric or continuous variables can be any value within a finite or infinite interval (temperature, height, weight.
-    There are two types of numeric variables are interval and ratios.
-    •	Interval variables have numeric scales and the same interpretation throughout the scale, but do not have an absolute zero. eg temperature in Fahrenheit or Celcius can meaningfully be subtracted or added (difference between 10 degrees and 20 degrees is the same difference as 40 to 50 degrees) but cannot be multiplied. For example, a day which is twice as hot may not be twice the temperature
-    •	ratio scale of measurement is the most informative scale. It is an interval scale with the additional property that its zero position indicates the absence of the quantity being measured.
+
+There are two types of numeric variables are interval and ratios:
+
+*	Interval variables have numeric scales and the same interpretation throughout the scale, but do not have an absolute zero. eg temperature in Fahrenheit or Celcius can meaningfully be subtracted or added (difference between 10 degrees and 20 degrees is the same difference as 40 to 50 degrees) but cannot be multiplied. For example, a day which is twice as hot may not be twice the temperature
+*	ratio scale of measurement is the most informative scale. It is an interval scale with the additional property that its zero position indicates the absence of the quantity being measured.
 
 Transforming Data: There are a couple of techniques:
-    •	Binning (Numerical to Categorical) -Binning
-    •	Encoding (Categorical to Numerical); Continuization
-    o	Encoding or continuation is the transformation of categorical variables to binary or numerical counterparts. An example is to treat male or female for gender as 1 or 0. Categorical variables must be encoded in many modeling methods (e.g., linear regression, SVM, neural networks)
-    o	Two main types of encoding are Binary and Target-based (<http://www.saedsayad.com/encoding.htm>)
-    o	Binary encoding is a special case of encoding where the value is set to a 0 or 1 to indicate absence or presence of a category.
-    o	One hot encoding is a special case where multiple categories are each binary encoded. Given we have k categories, this will create k extra features (thus increasing the dimensionality of the data)
+
+*	Binning (Numerical to Categorical) -Binning
+*	Encoding (Categorical to Numerical); Continuization
+*	Encoding or continuation is the transformation of categorical variables to binary or numerical counterparts. An example is to treat male or female for gender as 1 or 0. Categorical variables must be encoded in many modeling methods (e.g., linear regression, SVM, neural networks)
+*	Two main types of encoding are Binary and Target-based (<http://www.saedsayad.com/encoding.htm>)
+*	Binary encoding is a special case of encoding where the value is set to a 0 or 1 to indicate absence or presence of a category.
+*	One hot encoding is a special case where multiple categories are each binary encoded. Given we have k categories, this will create k extra features (thus increasing the dimensionality of the data)
 
 ## Business Requirements
 
@@ -97,21 +101,21 @@ In order to address the business requirements, we have the following epics and u
 
 ### User Stoires
 
-    •	US1: As a client, I want to know which attributes will help to differentiate weather a tumor is benign or malignant on the the right set of features.
+* US1: As a client, I want to know which attributes will help to differentiate weather a tumor is benign or malignant on the the right set of features.
     
-    •	US2: As a client, I want to have reliable prediction weather a tumor is bengin or maglignant helping to get the person the correct treament as quickly as possiable.
+* US2: As a client, I want to have reliable prediction weather a tumor is bengin or maglignant helping to get the person the correct treament as quickly as possiable.
 
-    •	US3: As a technical user, I want to learn about the ML steps that were used to arrive at the best prediction so that I can understand the model employed.
+* US3: As a technical user, I want to learn about the ML steps that were used to arrive at the best prediction so that I can understand the model employed.
     
-    •	US4: As a technical user, I want to know the model performance so that I can ensure that the predictions are reliable. 
+* US4: As a technical user, I want to know the model performance so that I can ensure that the predictions are reliable. 
     
-    •	US5: As a client, I want to get a dashboard so that I can display the results of the prediction on a standalone app.
+* US5: As a client, I want to get a dashboard so that I can display the results of the prediction on a standalone app.
     
-    •	US6: As a user, I want to have access to the data cleaning and preparation pipeline so that I can quickly detemine if the tumor is maglingant or begnian without reinventing the wheel.
+* US6: As a user, I want to have access to the data cleaning and preparation pipeline so that I can quickly detemine if the tumor is maglingant or begnian without reinventing the wheel.
     
-    •	US7: As a user, I want to know the source and content of the data used in training the model so that I can be confident about the quality of the trained model.
+* US7: As a user, I want to know the source and content of the data used in training the model so that I can be confident about the quality of the trained model.
     
-    •	US8: As a user, I want to know the project hypotheses and how they were validated so that I get a deeper understand of the mechanisms that determine if a tumor is maglignant or begnian.
+* US8: As a user, I want to know the project hypotheses and how they were validated so that I get a deeper understand of the mechanisms that determine if a tumor is maglignant or begnian.
 
 ## Hypothesis and how to validate?
 
@@ -126,15 +130,17 @@ In order to address the business requirements, we have the following epics and u
 ## The rationale to map the business requirements to the Data Visualizations and ML tasks
 
 Business Requirement 1: Data Visualizations
-1. Data Exploration
+1. Data Exploration 
 2. Categorical Data
 3. Feature Scaling
+The [NB2 Exploratory Data Analysis](/workspaces/Breast-Cancer-Prediction/jupyter_notebooks/NB2_ExploratoryDataAnalysis.ipynb) and [NB3 Data Preprocesing](/workspaces/Breast-Cancer-Prediction/jupyter_notebooks/NB3_DataPreprocesing.ipynb) notebooks handles this business requirement.
 
 Business Requirement 2: Machine Learing Classification Analysis
 1. Model Selection
 2. Finalize Model
 3. Test Model
 4. Conclusion
+The [NB5 Optimizing SVM Classifier](/workspaces/Breast-Cancer-Prediction/jupyter_notebooks/NB5_OptimizingSVMClassifier.ipynb) and [NB6 Comparison between different classifiers](/workspaces/Breast-Cancer-Prediction/jupyter_notebooks/NB6_Comparison_between_different_classifiers.ipynb) notebooks handles this business requirement.
 
 ## ML Business Case
 
