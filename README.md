@@ -170,7 +170,7 @@ We will use the CRISP-DM process to work though this and complete all requiement
 
 [NB4 Predictive Model Using SVM](/workspaces/Breast-Cancer-Prediction/jupyter_notebooks/NB4_PredictiveModelUsingSVM.ipynb) This notebook shows the Modeling part of the CRISP-DM process
 
-[NB5 Optimizing SVM Classifier](/workspaces/Breast-Cancer-Prediction/jupyter_notebooks/NB5_OptimizingSVMClassifier.ipynb)This notebook shows the Modeling part of the CRISP-DM process
+[NB5 Optimizing SVM Classifier](/workspaces/Breast-Cancer-Prediction/jupyter_notebooks/NB5_OptimizingSVMClassifier.ipynb)This notebook shows the Modeling and evalution parts of the CRISP-DM process
 
 [NB6 Comparison Between Different Classifiers](/workspaces/Breast-Cancer-Prediction/jupyter_notebooks/NB6_Comparison_between_different_classifiers.ipynb) This notebook shows the Evaluation part of the CRISP-DM process
 

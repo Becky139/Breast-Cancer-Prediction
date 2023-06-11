@@ -6,7 +6,7 @@ def page_summary_body():
     st.markdown("# Project Summary 🖥️")
     st.sidebar.markdown("# Project Summary 🖥️")
 
-    st.title(" Using Predictive Analysis To Predict Diagnosis of a Breast Tumor")
+    st.title("Using Predictive Analysis To Predict Diagnosis of a Breast Tumor")
 
     st.info("##  Identify the problem")
     st.write(
