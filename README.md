@@ -133,14 +133,14 @@ Business Requirement 1: Data Visualizations
 1. Data Exploration 
 2. Categorical Data
 3. Feature Scaling
-The [NB2 Exploratory Data Analysis](/workspaces/Breast-Cancer-Prediction/jupyter_notebooks/NB2_ExploratoryDataAnalysis.ipynb) and [NB3 Data Preprocesing](/workspaces/Breast-Cancer-Prediction/jupyter_notebooks/NB3_DataPreprocesing.ipynb) notebooks handles this business requirement.
+* The [NB2 Exploratory Data Analysis](/workspaces/Breast-Cancer-Prediction/jupyter_notebooks/NB2_ExploratoryDataAnalysis.ipynb) and [NB3 Data Preprocesing](/workspaces/Breast-Cancer-Prediction/jupyter_notebooks/NB3_DataPreprocesing.ipynb) notebooks handles this business requirement.
 
 Business Requirement 2: Machine Learing Classification Analysis
 1. Model Selection
 2. Finalize Model
 3. Test Model
 4. Conclusion
-The [NB5 Optimizing SVM Classifier](/workspaces/Breast-Cancer-Prediction/jupyter_notebooks/NB5_OptimizingSVMClassifier.ipynb) and [NB6 Comparison between different classifiers](/workspaces/Breast-Cancer-Prediction/jupyter_notebooks/NB6_Comparison_between_different_classifiers.ipynb) notebooks handles this business requirement.
+* The [NB5 Optimizing SVM Classifier](/workspaces/Breast-Cancer-Prediction/jupyter_notebooks/NB5_OptimizingSVMClassifier.ipynb) and [NB6 Comparison between different classifiers](/workspaces/Breast-Cancer-Prediction/jupyter_notebooks/NB6_Comparison_between_different_classifiers.ipynb) notebooks handles this business requirement.
 
 ## ML Business Case
 
