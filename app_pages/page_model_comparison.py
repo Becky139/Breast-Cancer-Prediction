@@ -145,8 +145,10 @@ def page_model_comparison_body():
     )
     st.markdown("1. Problem Definition (Breast Cancer data).")
     st.markdown("2. Loading the Dataset.")
-    st.markdown("3. Analyze Data (same scale but different distributions of \
-    data).")
+    st.markdown(
+        "3. Analyze Data (same scale but different distributions of \
+    data)."
+    )
     st.markdown("     * Evaluate Algorithms (KNN looked good).")
     st.markdown(
         "     * Evaluate Algorithms with Standardization (KNN and SVM looked \

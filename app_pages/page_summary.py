@@ -6,9 +6,7 @@ def page_summary_body():
     st.markdown("# Project Summary 🖥️")
     st.sidebar.markdown("# Project Summary 🖥️")
 
-    st.title(
-        "Using Predictive Analysis To Predict Diagnosis of a Breast Tumor"
-        )
+    st.title("Using Predictive Analysis To Predict Diagnosis of a Breast Tumor")
 
     st.info("##  Identify the problem")
     st.write(
@@ -56,7 +54,8 @@ def page_summary_body():
         f"* For additional information (particularly regarding the dataset "
         f"and data preparation), please visit the [Project README file]"
         f"(https://github.com/Becky139/Breast-Cancer-Prediction/blob/main/"
-        f"/README.md).")
+        f"/README.md)."
+    )
 
     # copied from README file - "Business Requirements" section
     st.success(

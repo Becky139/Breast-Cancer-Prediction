@@ -391,9 +391,7 @@ def page_data_anaylsis_body():
         eigenvectors that correspond to the kk largest eigenvalues where k is\
         the number of dimensions of the new feature subspace (k≤dk≤d)."
     )
-    st.markdown(
-        "6. Construct the projection matrix W from the selected k eigenvectors"
-    )
+    st.markdown("6. Construct the projection matrix W from the selected k eigenvectors")
 
     st.markdown(
         "7. Transform the original dataset X via W to obtain a k-dimensional \

@@ -166,8 +166,10 @@ def page_predictive_model_body():
         (or their probabilities) as described above. The rates are defined \
         according to the following:"
     )
-    st.markdown("> * True positive rate (or sensitivity)}: tpr = tp / \
-    (tp + fn)")
+    st.markdown(
+        "> * True positive rate (or sensitivity)}: tpr = tp / \
+    (tp + fn)"
+    )
     st.markdown("> * False positive rate:       fpr = fp / (fp + tn)")
     st.markdown("> * True negative rate (or specificity) tnr = tn / (fp + tn)")
 
@@ -218,16 +220,20 @@ def page_predictive_model_body():
         Positive Rate"
     )
 
-    st.markdown(" 6. **Precision**: When it predicts 1, how often is it \
-    correct?")
+    st.markdown(
+        " 6. **Precision**: When it predicts 1, how often is it \
+    correct?"
+    )
 
     st.markdown(
         " 7. **Prevalence**: How often does the yes condition actually occur \
         in our sample?"
     )
 
-    st.markdown(" 6. **Precision**: When it predicts 1, how often is it \
-    correct?")
+    st.markdown(
+        " 6. **Precision**: When it predicts 1, how often is it \
+    correct?"
+    )
     st.markdown(
         '* To interpret the ROC correctly, consider what the points that lie \
         along the diagonal represent. For these situations, there is an equal \
@@ -235,8 +241,10 @@ def page_predictive_model_body():
         from making a prediction by tossing of an unbiased coin. Put simply, \
         the classification model is random.'
     )
-    st.markdown(" 6. **Precision**: When it predicts 1, how often is it \
-        correct?")
+    st.markdown(
+        " 6. **Precision**: When it predicts 1, how often is it \
+        correct?"
+    )
     st.markdown(
         " 7. **Prevalence**: How often does the yes condition actually occur \
         in our sample?"
@@ -337,8 +345,10 @@ def page_predictive_model_body():
     st.markdown("1. Summary and conclusion of findings")
     st.markdown("2. Compare with other classification methods")
     st.markdown("    * Decision trees with tree.DecisionTreeClassifier();")
-    st.markdown("    * K-nearest neighbors with neighbors.KNeighborsClassifier\
-    ();")
+    st.markdown(
+        "    * K-nearest neighbors with neighbors.KNeighborsClassifier\
+    ();"
+    )
     st.markdown("    * Random forests with ensemble.RandomForestClassifier();")
     st.markdown(
         "    * Perceptron (both gradient and stochastic gradient) with \
