@@ -177,3 +177,6 @@ def page_model_comparison_body():
         explaining the model process with access given to the client for the \
         finalized model."
     )
+
+    st.markdown("<a href='#linkto_top'>Link to top</a>",
+                unsafe_allow_html=True)

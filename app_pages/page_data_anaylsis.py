@@ -4,7 +4,7 @@ from src.data_management import load_data, binary_data
 
 
 def page_data_anaylsis_body():
-    st.markdown("# Data Analysis 📊")
+    st.markdown("## Data Analysis 📊")
     st.sidebar.markdown("# Data Analysis📊")
 
     # load data
@@ -80,8 +80,8 @@ def page_data_anaylsis_body():
     st.info("### Descriptive statistics")
     st.markdown(
         "Summary statistics are measurements meant to describe data. In the \
-        field of descriptive statistics, there are many [summary measurements]\
-        (http://www.saedsayad.com/numerical_variables.htm)"
+        field of descriptive statistics, there are many \
+        [summary measurements](http://www.saedsayad.com/numerical_variables.htm)"
     )
 
     st.markdown("skew")
@@ -301,8 +301,7 @@ def page_data_anaylsis_body():
     st.title("Data Pre-Processing the data")
 
     st.markdown(
-        "[Data preprocessing]\
-            (http://www.cs.ccsu.edu/~markov/ccsu_courses/datamining-3.html) \
+        "[Data preprocessing](http://www.cs.ccsu.edu/~markov/ccsu_courses/datamining-3.html)\
         is a crucial step for any data analysis problem.\
         It is often a very good idea to prepare your data in such way to best \
         expose the structure of the problem to the machine learning algorithms\
@@ -359,10 +358,9 @@ def page_data_anaylsis_body():
         "In order to decide how many principal components should be retained, \
         it is common to summarise the results of a principal components \
         analysis by making a scree plot. More about scree plot can be found \
-        [here]\
-        (http://python-for-multivariate-analysis.readthedocs.io/a_little_book_of_python_for_multivariate_analysis.html)\
-        , and [hear]\
-        (https://www.analyticsvidhya.com/blog/2016/03/practical-guide-principal-component-analysis-python/)"
+        [here](http://python-for-multivariate-analysis.readthedocs.io/a_little_book_of_python_for_multivariate_analysis.html)\
+        , and\
+        [hear](https://www.analyticsvidhya.com/blog/2016/03/practical-guide-principal-component-analysis-python/)"
     )
 
     st.image("outputs/nb3/scree.jpeg")
@@ -392,7 +390,9 @@ def page_data_anaylsis_body():
         eigenvectors that correspond to the kk largest eigenvalues where k is\
         the number of dimensions of the new feature subspace (k≤dk≤d)."
     )
-    st.markdown("6. Construct the projection matrix W from the selected k eigenvectors")
+    st.markdown(
+        "6. Construct the projection matrix W from the selected k eigenvectors"
+        )
 
     st.markdown(
         "7. Transform the original dataset X via W to obtain a k-dimensional \
@@ -408,3 +408,6 @@ def page_data_anaylsis_body():
         before applying the PCA-based feature selection strategy in the model \
         building pipeline."
     )
+
+    st.markdown("<a href='#linkto_top'>Link to top</a>",
+                unsafe_allow_html=True)

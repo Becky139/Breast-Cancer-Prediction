@@ -358,3 +358,6 @@ def page_predictive_model_body():
         "    * Multilayer perceptron network (both gradient and stochastic \
         gradient) with mlxtend.classifier.MultiLayerPerceptron."
     )
+
+    st.markdown("<a href='#linkto_top'>Link to top</a>",
+                unsafe_allow_html=True)

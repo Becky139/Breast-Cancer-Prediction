@@ -6,7 +6,9 @@ def page_summary_body():
     st.markdown("# Project Summary 🖥️")
     st.sidebar.markdown("# Project Summary 🖥️")
 
-    st.title("Using Predictive Analysis To Predict Diagnosis of a Breast Tumor")
+    st.title(
+        "Using Predictive Analysis To Predict Diagnosis of a Breast Tumor"
+        )
 
     st.info("##  Identify the problem")
     st.write(
@@ -103,3 +105,6 @@ def page_summary_body():
         st.write(df.head(10))
 
     st.write("---")
+
+    st.markdown("<a href='#linkto_top'>Link to top</a>",
+                unsafe_allow_html=True)
