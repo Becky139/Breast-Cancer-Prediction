@@ -301,8 +301,11 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 ### Other technologies used
 
 Streamlit - Development of dashboard for presentation of data and project delivery
+
 Heroku - Deployment of dashboard as web application
+
 Git/GitHub - Version control and storage of source code
+
 CodeAnywhere - IDE Workspace in which application was developed
 
 ### Main Languages Used
