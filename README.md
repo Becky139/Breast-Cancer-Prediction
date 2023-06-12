@@ -198,15 +198,12 @@ Show the project hypothesis and explain how we can validate this.
 ### Page 4: Predictive Model
 * Model Selection
 * Test Model
-Construct predictive models to predict the diagnosis of a breast tumor. We'll construct a predictive model using SVM machine learning algorithm to predict the diagnosis of a breast tumor. The diagnosis of a breast tumor is a binary variable (benign or malignant). we'll also evaluate the model using confusion matrix the receiver operating curves (ROC), which are essential in assessing and interpreting the fitted model.
-
-### Page 5 Optimizing Classifier
 * Optimizing the SVM Classifier
 * Grid Search Parameter Tuning
 * Random Search Parameter Tuning
-Construct predictive models to predict the diagnosis of a breast tumor. We'll aim to tune parameters of the SVM Classification model using scikit-learn.
+* Construct predictive models to predict the diagnosis of a breast tumor. We'll construct a predictive model using SVM machine learning algorithm to predict the diagnosis of a breast tumor. The diagnosis of a breast tumor is a binary variable (benign or malignant). we'll also evaluate the model using confusion matrix the receiver operating curves (ROC), which are essential in assessing and interpreting the fitted model. Construct predictive models to predict the diagnosis of a breast tumor. We'll aim to tune parameters of the SVM Classification model using scikit-learn.
 
-### Page 6: Model Comparison/Conculsion
+### Page 5: Model Comparison/Conculsion
 * Evaluate Algorithms
 * Tuning Hyper-Parameters
 * Finalize Model
