@@ -301,8 +301,9 @@ def page_data_anaylsis_body():
     st.title("Data Pre-Processing the data")
 
     st.markdown(
-        "[Data preprocessing](http://www.cs.ccsu.edu/~markov/ccsu_courses\
-        /datamining-3.html) is a crucial step for any data analysis problem.\
+        "[Data preprocessing]\
+            (http://www.cs.ccsu.edu/~markov/ccsu_courses/datamining-3.html) \
+        is a crucial step for any data analysis problem.\
         It is often a very good idea to prepare your data in such way to best \
         expose the structure of the problem to the machine learning algorithms\
         that you intend to use.This involves a number of activities such as:"
@@ -358,10 +359,10 @@ def page_data_anaylsis_body():
         "In order to decide how many principal components should be retained, \
         it is common to summarise the results of a principal components \
         analysis by making a scree plot. More about scree plot can be found \
-        [here](http://python-for-multivariate-analysis.readthedocs.io\
-        /a_little_book_of_python_for_multivariate_analysis.html), and [hear]\
-        (https://www.analyticsvidhya.com/blog/2016/03\
-        /practical-guide-principal-component-analysis-python/)"
+        [here]\
+        (http://python-for-multivariate-analysis.readthedocs.io/a_little_book_of_python_for_multivariate_analysis.html)\
+        , and [hear]\
+        (https://www.analyticsvidhya.com/blog/2016/03/practical-guide-principal-component-analysis-python/)"
     )
 
     st.image("outputs/nb3/scree.jpeg")
