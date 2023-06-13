@@ -49,8 +49,8 @@ def page_data_anaylsis_body():
     )
 
     st.markdown(
-        "* For data pre-processing to be successful, it is essential to have an\
-        overall picture of your data"
+        "* For data pre-processing to be successful, it is essential to have \
+        an overall picture of your data"
     )
 
     st.markdown(
@@ -155,9 +155,9 @@ def page_data_anaylsis_body():
 
     st.markdown(
         " Histograms group data into bins and provide you a count of the \
-        number of observations in each bin. From the shape of the bins, you can\
-        quickly get a feeling for whether an attribute is Gaussian, skewed or \
-        even has an exponential distribution. It can also help you see \
+        number of observations in each bin. From the shape of the bins, you \
+        can quickly get a feeling for whether an attribute is Gaussian, skewed\
+        or even has an exponential distribution. It can also help you see \
         possible outliers."
     )
 
@@ -215,11 +215,11 @@ def page_data_anaylsis_body():
     st.success("### Observation")
     st.markdown(
         "We can see that perhaps the attributes perimeter, radius, area, \
-        concavity, compactness may have an exponential distribution ( ). We can\
-        also see that perhaps the texture and smooth and symmetry attributes \
-        may have a Gaussian or nearly Gaussian distribution. This is \
-        interesting because many machine learning techniques assume a Gaussian\
-        univariate distribution on the input variables."
+        concavity, and compactness may have an exponential distribution ( ). \
+        We can also see that perhaps the texture and smooth and symmetry \
+        attributes may have a Gaussian or nearly Gaussian distribution. This \
+        is interesting because many machine learning techniques assume a \
+        Gaussian univariate distribution on the input variables."
     )
 
     st.title("Visualise distribution of data via box plots")
@@ -242,11 +242,11 @@ def page_data_anaylsis_body():
     st.success("### Observation")
     st.markdown(
         "We can see that perhaps the attributes perimeter, radius, area, \
-        concavity, compactness may have an exponential distribution ( ). We can\
-        also see that perhaps the texture and smooth and symmetry attributes \
-        may have a Gaussian or nearly Gaussian distribution. This is \
-        interesting because many machine learning techniques assume a Gaussian\
-        univariate distribution on the input variables."
+        concavity, compactness may have an exponential distribution ( ). We \
+        can also see that perhaps the texture and smooth and symmetry \
+        attributes may have a Gaussian or nearly Gaussian distribution. This \
+        is interesting because many machine learning techniques assume a \
+        Gaussian univariate distribution on the input variables."
     )
 
     st.info("## Multimodal Data Visualizations")
@@ -402,7 +402,7 @@ def page_data_anaylsis_body():
     st.markdown(
         "It is common to select a subset of features that have the largest \
         correlation with the class labels. The effect of feature selection \
-        must be assessed within a complete modelling pipeline in order to give \
+        must be assessed within a complete modelling pipeline in order to give\
         you an unbiased estimate of your model’s true performance. Hence, in \
         the next section you will first be introduced to cross-validation, \
         before applying the PCA-based feature selection strategy in the model \
@@ -411,4 +411,3 @@ def page_data_anaylsis_body():
 
     st.markdown("<a href='#linkto_top'><button>Back to top</button></a>",
                 unsafe_allow_html=True)
-

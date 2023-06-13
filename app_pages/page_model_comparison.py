@@ -139,7 +139,7 @@ def page_model_comparison_body():
     st.success("## Summary")
 
     st.markdown(
-        "Worked through a classification predictive modelling machine learning \
+        "Worked through a classification predictive modelling machine learning\
         problem from end-to-end using Python. Specifically, the steps covered \
         were:"
     )

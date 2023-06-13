@@ -1,5 +1,6 @@
 import streamlit as st
 
+
 def page_predictive_model_body():
     st.markdown("# Predictive Model 🎉")
     st.sidebar.markdown("# Predictive Model 🎉")
@@ -90,7 +91,7 @@ def page_predictive_model_body():
     )
 
     st.markdown(
-        "* Training is repeated again with the remaining folds, and we measure \
+        "* Training is repeated again with the remaining folds, and we measure\
         performance using the holdout sample. This process is repeated until \
         each fold has had a chance to be a test or holdout sample."
     )
@@ -102,14 +103,14 @@ def page_predictive_model_body():
     )
 
     st.markdown(
-        "* Training is repeated again with the remaining folds, and we measure \
+        "* Training is repeated again with the remaining folds, and we measure\
         performance using the holdout sample. This process is repeated until \
         each fold has had a chance to be a test or holdout sample."
     )
 
     st.markdown(
         "* The expected performance of the classifier, called cross-validation\
-         error, is then simply an average of error rates computed on each \
+        error, is then simply an average of error rates computed on each \
         holdout sample."
     )
 
@@ -232,7 +233,7 @@ def page_predictive_model_body():
     )
     st.markdown(
         '* To interpret the ROC correctly, consider what the points that lie \
-        along the diagonal represents. For these situations, there is an equal \
+        along the diagonal represents. For these situations, there is an equal\
         chance of "+" and "-" happening. Therefore, this is not that different\
         from making a prediction by tossing of an unbiased coin. Put simply, \
         the classification model is random.'
@@ -254,7 +255,7 @@ def page_predictive_model_body():
 
     st.markdown(
         '* To interpret the ROC correctly, consider what the points that lie \
-        along the diagonal represents. For these situations, there is an equal \
+        along the diagonal represents. For these situations, there is an equal\
         chance of "+" and "-" happening. Therefore, this is not that different\
         from making a prediction by tossing of an unbiased coin. Put simply, \
         the classification model is random.'
@@ -275,7 +276,7 @@ def page_predictive_model_body():
     st.title("Optimizing the SVM Classifier")
 
     st.markdown(
-        "Machine learning models are parameterized so that their behaviour can \
+        "Machine learning models are parameterized so that their behaviour can\
         be tuned for a given problem. Models can have many parameters and \
         finding the best combination of parameters can be treated as a search \
         problem. In this notebook, I aim to tune parameters of the SVM \

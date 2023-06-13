@@ -16,10 +16,11 @@ def page_summary_body():
         for nearly 1 in 3 cancers diagnosed among women in the United States, \
         and it is the second leading cause of cancer death among women. Breast\
         Cancer occurs as a result of abnormal growth of cells in the breast \
-        tissue, commonly referred to as a tumour. A tumour does not mean cancer \
-        - tumours can be benign (not cancerous), pre-malignant (pre-cancerous),\
-        or malignant (cancerous). Tests such as MRI, mammogram, ultrasound and\
-        biopsies are commonly used to diagnose breast cancer performed."
+        tissue, commonly referred to as a tumour. A tumour does not mean \
+        cancer - tumours can be benign (not cancerous), pre-malignant \
+        (pre-cancerous)or malignant (cancerous). Tests such as MRI, mammogram,\
+        ultrasound and biopsies are commonly used to diagnose breast cancer \
+        performed."
     )
 
     st.info("## Expected outcome")
@@ -108,4 +109,3 @@ def page_summary_body():
 
     st.markdown("<a href='#linkto_top'><button>Back to top</button></a>",
                 unsafe_allow_html=True)
-

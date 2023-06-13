@@ -231,6 +231,11 @@ There are standard workflows in a machine learning project that can be automated
 
 ## Testing
 
+### Manual Testing
+
+sidebar menu
+back to top button
+
 ### Code Validation
 
 All of the Python code in this project was validated as conforming to PEP8 standards via installation of the pycodestyle package in the workspace terminal via pip install pycodestyle
