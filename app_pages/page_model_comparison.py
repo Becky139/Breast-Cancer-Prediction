@@ -24,11 +24,11 @@ def page_model_comparison_body():
     )
     st.markdown(
         "* Pipelines work by allowing for a linear sequence of data transforms\
-        to be chained together culminating in a modeling process that can be \
+        to be chained together culminating in a modelling process that can be \
         evaluated."
     )
 
-    st.info("### Data Preparation and Modeling Pipeline")
+    st.info("### Data Preparation and Modelling Pipeline")
 
     st.markdown("### Evaluate Some Algorithms")
     st.markdown(
@@ -105,7 +105,7 @@ def page_model_comparison_body():
         hyperparameters that you’ll want to tune:"
     )
 
-    st.markdown("* The number of neighbors k.")
+    st.markdown("* The number of neighbours k.")
     st.markdown("* The distance metric/similarity function.")
 
     st.markdown(
@@ -121,8 +121,8 @@ def page_model_comparison_body():
         "Each time, the n_neighbors parameter should be given a different \
         value from the list"
     )
-    st.markdown("We cant give GridSearchCV just a list")
-    st.markdown("Weve to specify n_neighbors should take on 1 through 30")
+    st.markdown("We can’t give GridSearchCV just a list")
+    st.markdown("We have to specify n_neighbors should take on 1 through 30")
     st.markdown(
         "You can set n_jobs = -1 to run computations in parallel (if supported\
         by your computer and OS)"
@@ -139,14 +139,14 @@ def page_model_comparison_body():
     st.success("## Summary")
 
     st.markdown(
-        "Worked through a classification predictive modeling machine learning \
+        "Worked through a classification predictive modelling machine learning \
         problem from end-to-end using Python. Specifically, the steps covered \
         were:"
     )
     st.markdown("1. Problem Definition (Breast Cancer data).")
     st.markdown("2. Loading the Dataset.")
     st.markdown(
-        "3. Analyze Data (same scale but different distributions of \
+        "3. Analyse Data (same scale but different distributions of \
     data)."
     )
     st.markdown("     * Evaluate Algorithms (KNN looked good).")
@@ -167,7 +167,7 @@ def page_model_comparison_body():
 
     st.markdown(
         "The purpose of this study was to create a model that can predict if a\
-        tumor is benign or malignant based on the given features. The SVC \
+        tumour is benign or malignant based on the given features. The SVC \
         provided the best accuracy score with the given hyper-parameters. We \
         also observed that scaling the data improved the performance of the \
         algorithm for the sample dataset. This Model validates our hypothesis \
@@ -180,3 +180,4 @@ def page_model_comparison_body():
 
     st.markdown("<a href='#linkto_top'><button>Back to top</button></a>",
                 unsafe_allow_html=True)
+

@@ -1,8 +1,4 @@
 import streamlit as st
-import pandas as pd
-import plotly.express as px
-import matplotlib.pyplot as plt
-
 
 def page_predictive_model_body():
     st.markdown("# Predictive Model 🎉")
@@ -38,22 +34,22 @@ def page_predictive_model_body():
     )
 
     st.markdown(
-        "3. SVMs requires careful preprocessing of the data and tuning of the \
+        "3. SVMs require careful pre-processing of the data and tuning of the \
         parameters. This is why, these days, most people instead use \
         tree-based models such as random forests or gradient boosting (which \
-        require little or no preprocessing) in many applications."
+        require little or no pre-processing) in many applications."
     )
     st.markdown(
-        "3. SVMs requires careful preprocessing of the data and tuning of the \
+        "3. SVMs require careful pre-processing of the data and tuning of the \
         parameters. This is why, these days, most people instead use \
         tree-based models such as random forests or gradient boosting (which \
-        require little or no preprocessing) in many applications."
+        require little or no pre-processing) in many applications."
     )
     st.markdown(
-        "3. SVMs requires careful preprocessing of the data and tuning of the \
+        "3. SVMs require careful pre-processing of the data and tuning of the \
         parameters. This is why, these days, most people instead use \
         tree-based models such as random forests or gradient boosting (which \
-        require little or no preprocessing) in many applications."
+        require little or no pre-processing) in many applications."
     )
     st.markdown(
         "4.  SVM models are hard to inspect; it can be difficult to understand\
@@ -73,7 +69,7 @@ def page_predictive_model_body():
     )
 
     st.markdown(
-        "gamma and C both control the complexity of the model, with large \
+        "Gamma and C both control the complexity of the model, with large \
         values in either resulting in a more complex model. Therefore, good \
         settings for the two parameters are usually strongly correlated, and C\
         and gamma should be adjusted together."
@@ -94,7 +90,7 @@ def page_predictive_model_body():
     )
 
     st.markdown(
-        "* Training is repeated again with the remaining folds and we measure \
+        "* Training is repeated again with the remaining folds, and we measure \
         performance using the holdout sample. This process is repeated until \
         each fold has had a chance to be a test or holdout sample."
     )
@@ -106,7 +102,7 @@ def page_predictive_model_body():
     )
 
     st.markdown(
-        "* Training is repeated again with the remaining folds and we measure \
+        "* Training is repeated again with the remaining folds, and we measure \
         performance using the holdout sample. This process is repeated until \
         each fold has had a chance to be a test or holdout sample."
     )
@@ -178,7 +174,7 @@ def page_predictive_model_body():
     st.success("#### Observation")
     st.markdown(
         'There are two possible predicted classes: "1" and "0". Malignant = 1\
-        (indicates prescence of cancer cells) and Benign'
+        (indicates presence of cancer cells) and Benign'
     )
 
     st.markdown(
@@ -213,7 +209,7 @@ def page_predictive_model_body():
 
     st.markdown(
         " 5. **Specificity**: When its actually 0, how often does it \
-        predict 0? also know as **true positive rate**"
+        predict 0? also known as **true positive rate**"
     )
     st.markdown(
         "    * TN/actual no = 106/107 = 0.99 equivalent to 1 minus False \
@@ -236,7 +232,7 @@ def page_predictive_model_body():
     )
     st.markdown(
         '* To interpret the ROC correctly, consider what the points that lie \
-        along the diagonal represent. For these situations, there is an equal \
+        along the diagonal represents. For these situations, there is an equal \
         chance of "+" and "-" happening. Therefore, this is not that different\
         from making a prediction by tossing of an unbiased coin. Put simply, \
         the classification model is random.'
@@ -258,7 +254,7 @@ def page_predictive_model_body():
 
     st.markdown(
         '* To interpret the ROC correctly, consider what the points that lie \
-        along the diagonal represent. For these situations, there is an equal \
+        along the diagonal represents. For these situations, there is an equal \
         chance of "+" and "-" happening. Therefore, this is not that different\
         from making a prediction by tossing of an unbiased coin. Put simply, \
         the classification model is random.'
@@ -279,7 +275,7 @@ def page_predictive_model_body():
     st.title("Optimizing the SVM Classifier")
 
     st.markdown(
-        "Machine learning models are parameterized so that their behavior can \
+        "Machine learning models are parameterized so that their behaviour can \
         be tuned for a given problem. Models can have many parameters and \
         finding the best combination of parameters can be treated as a search \
         problem. In this notebook, I aim to tune parameters of the SVM \
@@ -303,10 +299,10 @@ def page_predictive_model_body():
     st.markdown(
         "The default for SVM (the SVC class) is to use the Radial Basis \
         Function (RBF) kernel with a C value set to 1.0. Like with KNN, we \
-        will perform a grid search using 10-fold cross validation with a \
+        will perform a grid search using 10-fold cross-validation with a \
         standardized copy of the training dataset. We will try a number of \
         simpler kernel types and C values with less bias and more bias (less \
-        than and more than 1.0 respectively)."
+        then and more than 1.0 respectively)."
     )
 
     st.markdown(
@@ -346,7 +342,7 @@ def page_predictive_model_body():
     st.markdown("2. Compare with other classification methods")
     st.markdown("    * Decision trees with tree.DecisionTreeClassifier();")
     st.markdown(
-        "    * K-nearest neighbors with neighbors.KNeighborsClassifier\
+        "    * K-nearest neighbours with neighbors.KNeighborsClassifier\
     ();"
     )
     st.markdown("    * Random forests with ensemble.RandomForestClassifier();")
