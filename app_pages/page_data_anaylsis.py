@@ -409,5 +409,5 @@ def page_data_anaylsis_body():
         building pipeline."
     )
 
-    st.markdown("<a href='#linkto_top'>Link to top</a>",
+    st.markdown("<a href='#linkto_top'><button>Back to top</button></a>",
                 unsafe_allow_html=True)

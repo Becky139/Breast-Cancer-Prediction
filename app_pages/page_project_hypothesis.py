@@ -27,6 +27,3 @@ def page_project_hypothesis_body():
         insights offered by conventional data analysis to aid in getting a \
         diagonisis quickly and with a high degree of accuracy.\n"
     )
-
-    st.markdown("<a href='#linkto_top'>Link to top</a>",
-                unsafe_allow_html=True)

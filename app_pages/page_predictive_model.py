@@ -359,5 +359,5 @@ def page_predictive_model_body():
         gradient) with mlxtend.classifier.MultiLayerPerceptron."
     )
 
-    st.markdown("<a href='#linkto_top'>Link to top</a>",
+    st.markdown("<a href='#linkto_top'><button>Back to top</button></a>",
                 unsafe_allow_html=True)

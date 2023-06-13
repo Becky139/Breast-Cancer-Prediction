@@ -1,3 +1,5 @@
+# Breast Cancer Prediction
+
 ![project](assets/images/responsive.png)
 
 The dashboard for [Breast Cancer model is hosted on Heroku](https://breast-cancer-prediction.herokuapp.com/)
@@ -38,6 +40,8 @@ Since the labels in the data are discrete, the predication falls into two catego
         
 > *Thus, the goal is to classify whether the breast cancer is benign or malignant and predict the recurrence and non-recurrence of malignant cases after a certain period.  To achieve this we have used machine learning classification methods to fit a function that can predict the discrete class of new input.*
 
+[Back to top](#breast-cancer-prediction)
+
 ## Dataset Content
 
 * The dataset is on kaggel it is publicly available so it does not require a license to use, the data set contain 569 rows and 32 columns. Each row represents and person and the columns have differant signs or textures of tumours. The dataset contains **569 samples of malignant and benign tumor cells**. 
@@ -77,6 +81,8 @@ Transforming Data: There are a couple of techniques:
 *	Binary encoding is a special case of encoding where the value is set to a 0 or 1 to indicate absence or presence of a category.
 *	One hot encoding is a special case where multiple categories are each binary encoded. Given we have k categories, this will create k extra features (thus increasing the dimensionality of the data)
 
+[Back to top](#breast-cancer-prediction)
+
 ## Business Requirements
 
 Business Requirement 1
@@ -90,6 +96,8 @@ Business Requirement 2
 *	The client is interested in predicting whether a given tumour is malignant or benign based on the given features, with a high degree of accuracy.
 
 In order to address the business requirements, we have the following epics and user stories. Each user story was then broken down to manageable stasks, and the agile process was used to implement each task.
+
+[Back to top](#breast-cancer-prediction)
 
 ### Epics
 
@@ -117,6 +125,8 @@ In order to address the business requirements, we have the following epics and u
     
 * US8: As a user, I want to know the project hypotheses and how they were validated so that I get a deeper understand of the mechanisms that determine if a tumor is maglignant or begnian.
 
+[Back to top](#breast-cancer-prediction)
+
 ## Hypothesis and how to validate?
 
 * We believe that by looking at different features we can with a good degree of accuracy differentiate between benign or malignant tumours. For this model, we would need the accuracy to be above 90% as stated in the business requirements.
@@ -141,6 +151,8 @@ Business Requirement 2: Machine Learing Classification Analysis
 3. Test Model
 4. Conclusion
 * The [NB5 Optimizing SVM Classifier](https://github.com/Becky139/Breast-Cancer-Prediction/blob/main/jupyter_notebooks/NB5_OptimizingSVMClassifier.ipynb) and [NB6 Comparison between different classifiers](https://github.com/Becky139/Breast-Cancer-Prediction/blob/main/jupyter_notebooks/NB6_Comparison_between_different_classifiers.ipynb) notebooks handles this business requirement.
+
+[Back to top](#breast-cancer-prediction)
 
 ## ML Business Case
 
@@ -176,6 +188,8 @@ We will use the CRISP-DM process to work though this and complete all requiement
 
 The final part of the process is the deployment the process to deploy is shown in the deployment section of this file and can be veiwed in the finished streamlit application [Breast Cancer model is hosted on Heroku](https://breast-cancer-prediction.herokuapp.com/)
 
+[Back to top](#breast-cancer-prediction)
+
 ## Dashboard Design
 
 ### Page 1: Quick project summary
@@ -209,7 +223,9 @@ Show the project hypothesis and explain how we can validate this.
 * Finalize Model
 * Conclusion
 There are standard workflows in a machine learning project that can be automated. In Python scikit-learn, Pipelines help to clearly define and automate these workflows.Pipelines help overcome common problems like data leakage in your test harness. Python scikit-learn provides a Pipeline utility to help automate machine learning workflows.Pipelines work by allowing for a linear sequence of data transforms to be chained together culminating in a modeling process that can be evaluated.
-  
+
+[Back to top](#breast-cancer-prediction)
+
 ## Unfixed Bugs
 * There were no known unfixed bugs in this project.
 
@@ -224,6 +240,8 @@ For the cells of the Jupyter notebooks, an additional step was required of tempo
 I subsequently reran the cells and edited them according to the errors that were documented there.
 
 For the Streamlit app pages and source code files, I simply edited the code until no errors were recorded in the Problems section of the GitPod workspace.
+
+[Back to top](#breast-cancer-prediction)
 
 ## Deployment
 ### Heroku
@@ -283,6 +301,8 @@ To log into the Heroku toolbelt CLI:
 
 You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with *Regenerate API Key*.
 
+[Back to top](#breast-cancer-prediction)
+
 ## Main Data Analysis and Machine Learning Libraries
 
 * NumPy - Processing of images via conversion to NumPy arrays. Many other libraries used in this project are also dependent on NumPy
@@ -325,3 +345,5 @@ The icon in the dashboard app was taken from this page
 - I would like to thank my tutor Mo Shami, for their invaluable help and guidance throughout the process.
 - Lastly, I would like to extend my deepest gratitude to the amazing people in Slack who helped me rigorously test every aspect of my site.
 
+
+[Back to top](#breast-cancer-prediction)
