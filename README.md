@@ -233,8 +233,64 @@ There are standard workflows in a machine learning project that can be automated
 
 ### Manual Testing
 
-sidebar menu
-back to top button
+Common Elements Testing
+Manual testing was conducted on the following elements that appear on every page:
+
+- Clicking on the Navigation Bar's links will bring the user to the specified page
+
+![Streamlit Navigation Bar Radio Buttons](assets/videos/stmenu-test.mp4)
+
+- Clicking the Back-to-top button, located at the bottom right of the screen, will bring the user to the top of the page.
+
+* Summary Page
+
+![Back To Top Button Summary Page](assets/videos/btt-test-summary.mp4)
+
+* Data Analysis Page
+
+![Back To Top Button Data Analysis](assets/videos/btt-test-anaylsis.mp4)
+
+* Predictive Model Page
+
+![Back To Top Button Predictive Model](assets/videos/btt-test-model.mp4)
+
+* Model Comparison Page
+
+![Back To Top Model Comparison](assets/videos/btt-test-comparison.mp4)
+
+- Click the check box shows 10 lines of the dataset.
+
+* Raw Dataset on Summary Page
+
+![Raw Dataset Summary Page](assets/videos/rawdata-test-summary.mp4)
+
+* Cleaned Dataset on Data Analysis Page
+
+![Raw Dataset Summary Page](assets/videos/cleandata-test.mp4)
+
+* Binary Dataset on Data Analysis Page
+
+![Raw Dataset Summary Page](assets/videos/binarydata-test.mp4)
+
+- Click Links on App Pages Opens in New Tab
+
+* README File Link on Summary Page
+
+![README.md Link Summary Page](assets/videos/readme-link-test.mp4)
+
+* Summary Measurements Link on Data Analysis Page
+
+![Summary Measurements Link](assets/videos/summary-link-test.mp4)
+
+* Data Preprocessing Link on Data Analysis
+
+![Data pre-processing Link](assets/videos/preprocessing-link-test.mp4)
+
+* Scree Plot Links on Data Analysis Page
+
+![Scree Plot Links](assets/videos/scree-links-test.mp4)
+
+[Back to top](#breast-cancer-prediction)
 
 ### Code Validation
 
