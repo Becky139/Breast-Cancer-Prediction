@@ -180,4 +180,3 @@ def page_model_comparison_body():
 
     st.markdown("<a href='#linkto_top'><button>Back to top</button></a>",
                 unsafe_allow_html=True)
-
