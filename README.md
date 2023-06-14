@@ -21,6 +21,8 @@ The dashboard for [Breast Cancer model is hosted on Heroku](https://breast-cance
     *	[Page 6: Model Comparison](#page-6-model-comparisonconculsion)
 8.  [Unfixed Bugs](#unfixed-bugs)
 9.  [Testing](#testing)
+    * [Manual Testing](#manual-testing)
+    * [Code Validation](#code-validation)
 10.	[Deployment](#deployment)
 11.	[Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
 12.	[Credits](#credits)
@@ -238,57 +240,57 @@ Manual testing was conducted on the following elements that appear on every page
 
 - Clicking on the Navigation Bar's links will bring the user to the specified page
 
-![Streamlit Navigation Bar Radio Buttons](assets/videos/stmenu-test.mp4)
+![Streamlit Navigation Bar Radio Buttons](assets/videos/stmenu-test.gif)
 
 - Clicking the Back-to-top button, located at the bottom right of the screen, will bring the user to the top of the page.
 
 * Summary Page
 
-![Back To Top Button Summary Page](assets/videos/btt-test-summary.mp4)
+![Back To Top Button Summary Page](assets/videos/btt-test-summary.gif)
 
 * Data Analysis Page
 
-![Back To Top Button Data Analysis](assets/videos/btt-test-anaylsis.mp4)
+![Back To Top Button Data Analysis](assets/videos/btt-test-anaylsis.gif)
 
 * Predictive Model Page
 
-![Back To Top Button Predictive Model](assets/videos/btt-test-model.mp4)
+![Back To Top Button Predictive Model](assets/videos/btt-test-model.gif)
 
 * Model Comparison Page
 
-![Back To Top Model Comparison](assets/videos/btt-test-comparison.mp4)
+![Back To Top Model Comparison](assets/videos/btt-test-comparison.gif)
 
 - Click the check box shows 10 lines of the dataset.
 
 * Raw Dataset on Summary Page
 
-![Raw Dataset Summary Page](assets/videos/rawdata-test-summary.mp4)
+![Raw Dataset Summary Page](assets/videos/rawdata-test-summary.gif)
 
 * Cleaned Dataset on Data Analysis Page
 
-![Raw Dataset Summary Page](assets/videos/cleandata-test.mp4)
+![Raw Dataset Summary Page](assets/videos/cleandata-test.gif)
 
 * Binary Dataset on Data Analysis Page
 
-![Raw Dataset Summary Page](assets/videos/binarydata-test.mp4)
+![Raw Dataset Summary Page](assets/videos/binarydata-test.gif)
 
 - Click Links on App Pages Opens in New Tab
 
 * README File Link on Summary Page
 
-![README.md Link Summary Page](assets/videos/readme-link-test.mp4)
+![README.md Link Summary Page](assets/videos/readme-link-test.gif)
 
 * Summary Measurements Link on Data Analysis Page
 
-![Summary Measurements Link](assets/videos/summary-link-test.mp4)
+![Summary Measurements Link](assets/videos/summary-link-test.gif)
 
 * Data Preprocessing Link on Data Analysis
 
-![Data pre-processing Link](assets/videos/preprocessing-link-test.mp4)
+![Data pre-processing Link](assets/videos/preprocessing-link-test.gif)
 
 * Scree Plot Links on Data Analysis Page
 
-![Scree Plot Links](assets/videos/scree-links-test.mp4)
+![Scree Plot Links](assets/videos/scree-links-test.gif)
 
 [Back to top](#breast-cancer-prediction)
 
