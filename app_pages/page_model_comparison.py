@@ -175,7 +175,9 @@ def page_model_comparison_body():
         wanted with 94% being higher than 90%. We have met the business \
         requirements with the dashboard navigation and by showing and \
         explaining the model process with access given to the client for the \
-        finalized model."
+        finalized model. The aim is to use this to help speed up the diagnosis\
+        to give people access to treatment quicker, given them a better chance\
+        of going into remission and living a good long and healthy life."
     )
 
     st.markdown("<a href='#linkto_top'><button>Back to top</button></a>",
