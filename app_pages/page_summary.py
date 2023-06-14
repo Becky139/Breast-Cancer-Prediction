@@ -50,6 +50,14 @@ def page_summary_body():
         machine learning classification methods to fit a function that can\
         predict the discrete class of new input.*"
     )
+    
+    st.write("Early-stage breast cancer often has a positive outlook with many\
+        people surviving due to treatment. Early-stage breast cancer can include\
+        several stages of breast cancer when cancer has not spread to distant \
+        areas of the body. Treatments can often cure or cause cancer to go into \
+        complete remission means that cancer cells are undetectable during \
+        testing. This project will help people get a quicker diagnosis and \
+        faster treatment helping to increase survival rates.")
 
     # Link to README file, so the users can have access to full project
     # documentation

@@ -42,6 +42,8 @@ Since the labels in the data are discrete, the predication falls into two catego
         
 > *Thus, the goal is to classify whether the breast cancer is benign or malignant and predict the recurrence and non-recurrence of malignant cases after a certain period.  To achieve this, we have used machine learning classification methods to fit a function that can predict the discrete class of new input.*
 
+Early-stage breast cancer often has a positive outlook with many people surviving due to treatment. Early-stage breast cancer can include several stages of breast cancer when cancer has not spread to distant areas of the body. Treatments can often cure or cause cancer to go into complete remission means that cancer cells are undetectable during testing. This project will help people get a quicker diagnosis and faster treatment helping to increase survival rates.
+
 [Back to top](#breast-cancer-prediction)
 
 ## Dataset Content
