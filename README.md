@@ -206,7 +206,7 @@ An introduction to the project with the goals in the form of business requiremen
 * Data Exploration
 * Categorical Data
 * Feature Scaling
-Explore the variables to assess how they relate to the response variable in this notebook, we'll get familiar with the data using data exploration and visualization techniques using python libraries (Pandas, matplotlib, seaborn. Familiarity with the data is important which will provide useful knowledge for data pre-processing). Find the most predictive features of the data and filter it so it will enhance the predictive power of the analytics model. We'll use feature selection to reduce high-dimension data, feature extraction and transformation for dimensionality reduction. This is essential in preparing the data before predictive models are developed.
+Explore the variables to assess how they relate to the response variable in this notebook, we'll get familiar with the data using data exploration and visualization techniques using python libraries (Pandas, matplotlib, seaborn. Familiarity with the data is important which will provide useful knowledge for data pre-processing). Find the most predictive features of the data and filter it so it will enhance the predictive power of the analytics model. We'll use feature selection to reduce high-dimension data, feature extraction and transformation for dimensionality reduction. This is essential in preparing the data before predictive models are developed. This covers business requirement 1.
 
 ### Page 3: Hypothesis
 * Project Hypothesis
@@ -219,14 +219,14 @@ Show the project hypothesis and explain how we can validate this.
 * Optimizing the SVM Classifier
 * Grid Search Parameter Tuning
 * Random Search Parameter Tuning
-* Construct predictive models to predict the diagnosis of a breast tumour. We'll construct a predictive model using SVM machine learning algorithm to predict the diagnosis of a breast tumour. The diagnosis of a breast tumour is a binary variable (benign or malignant). we'll also evaluate the model using confusion matrix the receiver operating curves (ROC), which are essential in assessing and interpreting the fitted model. Construct predictive models to predict the diagnosis of a breast tumour. We'll aim to tune parameters of the SVM Classification model using scikit-learn.
+* Construct predictive models to predict the diagnosis of a breast tumour. We'll construct a predictive model using SVM machine learning algorithm to predict the diagnosis of a breast tumour. The diagnosis of a breast tumour is a binary variable (benign or malignant). we'll also evaluate the model using confusion matrix the receiver operating curves (ROC), which are essential in assessing and interpreting the fitted model. Construct predictive models to predict the diagnosis of a breast tumour. We'll aim to tune parameters of the SVM Classification model using scikit-learn. This covers business requirement 2 along with the following page.
 
 ### Page 5: Model Comparison/Conclusion
 * Evaluate Algorithms
 * Tuning Hyper-Parameters
 * Finalize Model
 * Conclusion
-There are standard workflows in a machine learning project that can be automated. In Python scikit-learn, Pipelines help to clearly define and automate these workflows. Pipelines help overcome common problems like data leakage in your test harness. Python scikit-learn provides a Pipeline utility to help automate machine learning workflows. Pipelines work by allowing for a linear sequence of data transforms to be chained together culminating in a modelling process that can be evaluated.
+There are standard workflows in a machine learning project that can be automated. In Python scikit-learn, Pipelines help to clearly define and automate these workflows. Pipelines help overcome common problems like data leakage in your test harness. Python scikit-learn provides a Pipeline utility to help automate machine learning workflows. Pipelines work by allowing for a linear sequence of data transforms to be chained together culminating in a modelling process that can be evaluated. This in covers business requirement 2.
 
 [Back to top](#breast-cancer-prediction)
 
